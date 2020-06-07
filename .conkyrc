@@ -56,14 +56,14 @@ conky.config = {
 	font = 'Ubuntu Mono:size=12',
 	xftalpha = 0.8,
 	uppercase = false,
-	default_color = 'white',
+	default_color = 'Lightgray',
 	own_window_colour = '#000000',
 	minimum_width = 300, minimum_height = 0,
 	alignment = 'top_right',
 
 };
 conky.text = [[
-${alignr}${time %H:%M:%S}
+${alignc}${time %H:%M:%S}
 #${voffset -16}${font sans-serif:bold:size=18}${alignc}${time %H:%M}${font}
 ${voffset 4}${alignc}${time %A %B %d, %Y}
 ${font}${voffset -4}
@@ -86,6 +86,7 @@ $membar
 SWAP $alignc ${swap} / ${swapmax} $alignr ${swapperc}%
 ${swapbar}
 
+
 ${font sans-serif:bold:size=10}DISK USAGE ${hr 2}
 ${font sans-serif:normal:size=9}/ $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
 ${fs_bar /}
@@ -93,7 +94,7 @@ ${fs_bar /}
 
 ${font Ubuntu:bold:size=10}NETWORK ${hr 2}
 ${font sans-serif:normal:size=9}Down: ${downspeed wlan0}  ${alignr}Up: ${upspeed wlan0} 
-${color lightgray}${downspeedgraph wlan0 80,130 } ${alignr}${upspeedgraph wlan0 80,130 }$color
+${downspeedgraph wlan0 80,130 } ${alignr}${upspeedgraph wlan0 80,130 }$color
 ${font sans-serif:normal:size=9}Downloaded: ${totaldown wlan0} $alignr Uploaded: $alignr ${totalup wlan0}
 
 
