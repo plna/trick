@@ -3,7 +3,6 @@ call plug#begin("~/.vim/plugged")
 
 " Plugin Section
 Plug 'preservim/nerdtree'
-Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
@@ -14,20 +13,20 @@ Plug 'easymotion/vim-easymotion'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi'
 Plug 'tpope/vim-fugitive'
-Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
-Plug 'joshdick/onedark.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'ryanoasis/powerline-extra-symbols'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'jeetsukumaran/vim-pythonsense'
+Plug 'sheerun/vim-polyglot'
 
 
 call plug#end()
@@ -40,15 +39,18 @@ set ruler
 set termguicolors
 set number
 set relativenumber
-set laststatus=2
-set cursorline
-set mouse=a
+"set cursorline
+"set mouse=a
 set title
 set background=dark
 set wildmenu
+set showtabline=2
+"set noshowmode
+
 
 filetype plugin indent on
 syntax on
+"syntax enable
 colorscheme solarized8
 
 
@@ -57,8 +59,6 @@ hi Normal ctermbg=16 guibg=#000000
 hi LineNr ctermbg=16 guibg=#000000
 
 
-" DISABLE AUTOMATIC COMMENT example double quote
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 
 " AIRLINE theme, git icon, status
@@ -103,6 +103,8 @@ let g:fzf_colors =
 "Config Section
 
 
+" DISABLE AUTOMATIC COMMENT example double quote
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "autocmd vimenter * NERDTree
 
