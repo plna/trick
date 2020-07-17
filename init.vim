@@ -32,7 +32,11 @@ Plug 'psliwka/vim-smoothie'
 Plug 'junegunn/goyo.vim'
 Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-rooter'
-
+Plug 'kevinhwang91/rnvimr'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'PieterjanMontens/vim-pipenv'
 
 
 call plug#end()
@@ -53,12 +57,17 @@ set wildmenu
 set showtabline=2
 "set noshowmode
 set encoding=UTF-8
+set hlsearch
+set hidden
+set cmdheight=2
+set signcolumn=yes
+
 
 
 
 filetype plugin indent on
 syntax on
-"syntax enable
+syntax enable
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'ocean'
 colorscheme material
@@ -66,6 +75,7 @@ colorscheme material
 
 "hi Normal guibg=#000000
 "hi LineNr ctermbg=16 guibg=#000000
+
 
 
 " AIRLINE theme, git icon, status
@@ -107,25 +117,10 @@ let g:fzf_tags_command = 'ctags -R'
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp'  } }
 
 " Always enable preview window on the right with 60% width
-let g:fzf_preview_window = 'right:60% --color=always'
 let $FZF_DEFAULT_OPTS = '--layout=reverse --inline-info'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
 
 " Customize fzf colors to match your color scheme
-let g:fzf_colors =
-			\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
 "Get Files
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--inline-info']}), <bang>0)
@@ -175,7 +170,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-"map <C-o> :NERDTreeToggle<CR>
+map <C-i> :NERDTreeToggle<CR>
 nnoremap <C-o> :Buffers<CR>
 
 let g:closetag_filenames = '*.html,*.js,*.jsx'
