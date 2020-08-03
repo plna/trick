@@ -1,0 +1,12 @@
+Cross-Site Scripting (XSS),
+Insecure Direct Object Reference (IDOR),
+Cross-Site Request Forgery (CSRF),
+Race Conditions,
+Information Disclosure.
+
+PNG IMAGE
+<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg onload="alert(1)" xmlns="http://www.w3.org/2000/svg">
+<polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
+</svg>
+
+cat~/something.txt | xargs -P4 -I{} -n 1 python3 dirsearch.py -r -b -w ~/path.txt -t 40 -e html --timeout=3 -u {}
