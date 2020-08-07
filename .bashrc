@@ -135,18 +135,5 @@ if [ "$TERM" != "linux"  ] && [ -f "$GOPATH/bin/powerline-go"  ]; then
 fi
 
 
-#############################
-crtsh(){
-	    curl -s https://crt.sh/\?q=\%.$1\&output\=json  | jq -r '.[].name_value' | sed 's/\*\.//g' | grep $1 | sort -u
-	    
-}
-
-
-#################################
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
-
-# export PATH=$GOPATH/bin
-
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -125,21 +125,27 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+unalias gau
+unalias gf
 alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias python="python3"
 # alias pip="pip3"
 alias explorer="explorer.exe ."
-alias lc="colorls -lA --sd"
+alias lc="colorls -A --sd"
+alias lcl="colorls -Al --sd"
 alias lct="colorls --sd --tree"
-
+alias sublist3r="python3 ~/tools/Sublist3r/sublist3r.py"
 
 prompt_context(){}
 
-export PATH=$PATH:$(go env GOPATH)/bin
-export GOPATH=$(go env GOPATH)
 
+export GOPATH=$HOME/go
+export PATH=$PATH:/home/cocacola/go/bin
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/snap/bin
 
+autoload -U compaudit && compinit
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
