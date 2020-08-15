@@ -1,0 +1,19 @@
+k1llheal@wearehackerone.com
+
+
+cat index.min.js | grep -oh "\"\/[a-zA-Z0-9_/?=&]*\"" | sed -e 's/^"//' -e 's/"$//' | sort -u
+
+sudo amass enum -passive -d superdrug.com -src | awk '{print $2}' |  tee -a superdrug-subdomain
+
+cat~/something.txt | xargs -P4 -I{} -n 1 python3 dirsearch.py -r -b -w ~/path.txt -t 40 -e html --timeout=3 -u {}
+
+cat xyz | parallel -j50 -q curl -w 'Status:%{http_code}\t Size:%{size_download}\t %{url_effective}\n' -o /dev/null -sk | grep Status:200
+
+echo "domain.com" | waybackurls | cut -d "/" -f 4,5 | sed 's/?.*//' | sort -u
+
+
+while read u; do echo "$(printf '%-100s' "$u")-> $(( curl -I -s -m 5 -k "$u"||echo KO) | head -n 1 -)"; done
+
+
+curl 'https://www.superdrug.com/blog/api/2' \
+  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'

