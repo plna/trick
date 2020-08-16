@@ -18,6 +18,7 @@
 
     // If enabled, formatted data is also copied to your clipboard
     "copyFormatting": false,
+    
 
     // A profile specifies a command to execute paired with information about how it should look and feel.
     // Each one of them will appear in the 'New Tab' dropdown,
@@ -27,11 +28,12 @@
     {
         "defaults":
         {
+            // "useAcrylic": true,
+            // "acrylicOpacity": 0.5,
             // "startingDirectory": ".", 
             "colorScheme": "Material"
             // Put settings here that you want to apply to all profiles.
-            // "useAcrylic": true,
-            // "acrylicOpacity": 0.1
+            
         },
         "list":
         [
@@ -62,7 +64,10 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                
+                "backgroundImage": "D:\\Wallpaper\\Anime\\1054250.png",
+                // "backgroundImageStretchMode": "fill",
+                "backgroundImageOpacity": 0.5,
+                "backgroundImageAlignment": "bot",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
@@ -70,11 +75,12 @@
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                // "startingDirectory": "//wsl$//Ubuntu-20.04//home//cocacola",
+                "startingDirectory": "//wsl$//Ubuntu-20.04//home//cocacola",
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
                 "name": "Ubuntu-20.04",
-                "fontFace":  "CascadiaCode Nerd Font",
+                "fontFace":  "FiraCode Nerd Font",
+                "fontSize" : 10,
                 "source": "Windows.Terminal.Wsl"
             },
             {
@@ -127,6 +133,8 @@
 
         // Press Ctrl+Shift+F to open the search box
         { "command": "find", "keys": "ctrl+shift+f" },
+
+        // { "command": "commandPalette", "keys": "ctrl+shift+p" },
 
         // Press Alt+Shift+D to open a new pane.
         // - "split": "auto" makes this pane open in the direction that provides the most surface area.
