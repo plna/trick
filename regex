@@ -1,6 +1,12 @@
 k1llheal@wearehackerone.com
 
 
+cat yourSubdomains.txt | waybackurls | egrep ".*.js" > JSFiles.txt
+
+cat vimeo-massdns | grep -e ' A ' | cut -d 'A' -f 2 | tr -d ' ' > vimeo-massdns-domain
+
+cat superdrug-js-gau  | unfurl -u paths | sed "s#/#\n#g"
+
 cat index.min.js | grep -oh "\"\/[a-zA-Z0-9_/?=&]*\"" | sed -e 's/^"//' -e 's/"$//' | sort -u
 
 sudo amass enum -passive -d superdrug.com -src | awk '{print $2}' |  tee -a superdrug-subdomain
@@ -17,3 +23,12 @@ while read u; do echo "$(printf '%-100s' "$u")-> $(( curl -I -s -m 5 -k "$u"||ec
 
 curl 'https://www.superdrug.com/blog/api/2' \
   -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'
+
+for ip in $(cat ips.txt ); \
+do \
+	org=$(curl -s "https://ipinfo.io/$ip" | jq -r '.org' ); \
+  	title=$(timeout 2 curl --tlsv1.1 -s -k -H "Host: glassdoor.com" "https://$ip/" | pup 'title text{}'); \
+	echo "IP: $ip Title: $title Org: $org"; \
+done 
+
+curl -s <https://easyasn.xyz/companies/amazon/ranges.txt> | grep -v ":"

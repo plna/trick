@@ -256,5 +256,6 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt)
-❯ '
+PROMPT='%{%F{blue}%}┌─[%{%f%b%k%}$(build_prompt)
+%{%F{blue}%}└─╼ '
+
