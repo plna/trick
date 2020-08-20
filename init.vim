@@ -92,7 +92,6 @@ let g:airline_left_sep = "\uE0B0"
 let g:airline_right_sep = "\uE0B2"
 
 
-set  rtp+=/cocacola/.local/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh
 set laststatus=2
 
 

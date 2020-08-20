@@ -31,7 +31,7 @@
             // "useAcrylic": true,
             // "acrylicOpacity": 0.5,
             // "startingDirectory": ".", 
-            "colorScheme": "Material"
+            // "colorScheme": "Material"
             // Put settings here that you want to apply to all profiles.
             
         },
@@ -70,23 +70,29 @@
                 "backgroundImageAlignment": "bot",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
+                "colorScheme": "Material",
                 "name": "PowerShell",
                 "fontFace":  "Cascadia Code PL",
+                "fontSize" : 10,
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
-                "startingDirectory": "//wsl$//Ubuntu-20.04//home//cocacola",
+                "startingDirectory": "//wsl$//Ubuntu-20.04//home//ubuntu",
                 "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
                 "hidden": false,
+                "colorScheme": "Material",
                 "name": "Ubuntu-20.04",
                 "fontFace":  "FiraCode Nerd Font",
                 "fontSize" : 10,
                 "source": "Windows.Terminal.Wsl"
             },
             {
+                "startingDirectory": "//wsl$//kali-linux//home//kali",
                 "guid": "{46ca431a-3a87-5fb3-83cd-11ececc031d2}",
                 "hidden": false,
                 "name": "kali-linux",
+                "fontFace":  "FiraCode Nerd Font",
+                "fontSize" : 10,
                 "source": "Windows.Terminal.Wsl"
             }
         ]
@@ -134,7 +140,8 @@
         // Press Ctrl+Shift+F to open the search box
         { "command": "find", "keys": "ctrl+shift+f" },
 
-        // { "command": "commandPalette", "keys": "ctrl+shift+p" },
+        { "command": "commandPalette", "keys": "ctrl+shift+p" },
+        { "command": "toggleAlwaysOnTop", "keys": "alt+shift+tab" },
 
         // Press Alt+Shift+D to open a new pane.
         // - "split": "auto" makes this pane open in the direction that provides the most surface area.
