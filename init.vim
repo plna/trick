@@ -62,7 +62,7 @@ set hidden
 set cmdheight=2
 set signcolumn=yes
 
-
+set pastetoggle=<F2>
 
 
 filetype plugin indent on

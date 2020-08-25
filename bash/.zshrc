@@ -1,8 +1,4 @@
 ###################################
-dirsearch(){
-    
-    python3 ~/tools/dirsearch/dirsearch.py -e . -u $1
-}
 
 certprobe(){
     curl -s https://crt.sh/\?q=\%.$1\&output\=json  | jq -r '.[].name_value' | sed 's/\*\.//g' | grep $1 | sort -u | httprobe #| tee -a ./all.txt
@@ -17,7 +13,25 @@ crtsh(){
     curl -s https://crt.sh/\?q=\%.$1\&output\=json  | jq -r '.[].name_value' | sed 's/\*\.//g' | grep $1 | sort -u
 }
 
+response(){
+echo "Gathering Response"       
+        for x in $(cat alive)
+do
+        NAME=$(echo $x | awk -F/ '{print $3}')
+        curl -X GET -H "X-Forwarded-For: evil.com" $x -I > "headers/$NAME" 
+        curl -s -X GET -H "X-Forwarded-For: evil.com" -L $x > "responsebody/$NAME"
+done
+}
 
+findd(){
+	echo "Finding..."
+	find . -type d -name "$1"
+}
+
+findf(){
+	echo "Finding..."
+	find . -type f -name "$1"
+}
 #######################################
 
 
@@ -26,7 +40,7 @@ crtsh(){
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/cocacola/.oh-my-zsh"
+export ZSH="/home/ubuntu/.oh-my-zsh"
 
 export COLORTERM="truecolor"
 
@@ -72,7 +86,7 @@ ZSH_THEME="agnoster2"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -98,7 +112,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -131,21 +145,27 @@ alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias python="python3"
 # alias pip="pip3"
-alias explorer="explorer.exe ."
-alias lc="colorls -A --sd"
+alias expl="explorer.exe ."
+alias lc="colorls -A --gs --sd"
 alias lcl="colorls -Al --sd"
 alias lct="colorls --sd --tree"
 alias sublist3r="python3 ~/tools/Sublist3r/sublist3r.py"
+alias dirs="~/tools/dirsearch/dirsearch.py"
+alias wcl='wc -l'
 
 prompt_context(){}
 
 
 export GOPATH=$HOME/go
-export PATH=$PATH:/home/cocacola/go/bin
+export PATH=$PATH:/home/ubuntu/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/snap/bin
 
 autoload -U compaudit && compinit
 
 
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Created by `userpath` on 2020-08-24 14:12:06
+export PATH="$PATH:/home/ubuntu/.local/bin"

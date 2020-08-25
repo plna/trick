@@ -1,5 +1,13 @@
-k1llheal@wearehackerone.com
 
+
+
+
+
+grep -E -o "([0-9]{1,3}[\.]){1,3}([0-9]{1,3})" trails | sort -u 
+
+subfinder -silent -d rebelliondefense.com | dnsprobe -silent | awk  '{ print $2 }'  | sort -u  
+
+xargs -n 1 -I{} sh -c 'echo {} | base64 -d'
 
 cat yourSubdomains.txt | waybackurls | egrep ".*.js" > JSFiles.txt
 
@@ -21,14 +29,14 @@ echo "domain.com" | waybackurls | cut -d "/" -f 4,5 | sed 's/?.*//' | sort -u
 while read u; do echo "$(printf '%-100s' "$u")-> $(( curl -I -s -m 5 -k "$u"||echo KO) | head -n 1 -)"; done
 
 
-curl 'https://www.superdrug.com/blog/api/2' \
-  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36'
-
-for ip in $(cat ips.txt ); \
+for ip in $(cat IPs ); \
 do \
 	org=$(curl -s "https://ipinfo.io/$ip" | jq -r '.org' ); \
-  	title=$(timeout 2 curl --tlsv1.1 -s -k -H "Host: glassdoor.com" "https://$ip/" | pup 'title text{}'); \
+  	title=$(timeout 2 curl --tlsv1.1 -s -k -H "Host: rebelliondefense.com" "https://$ip/" | pup 'title text{}'); \
 	echo "IP: $ip Title: $title Org: $org"; \
 done 
 
 curl -s <https://easyasn.xyz/companies/amazon/ranges.txt> | grep -v ":"
+
+
+

