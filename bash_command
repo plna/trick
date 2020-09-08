@@ -1,7 +1,39 @@
 
 
 
+findomain -t http://testphp.vulnweb.com -q | httpx -silent | anew | waybackurls | gf sqli >> sqli ; sqlmap -m sqli -batch --random-agent --level 1
 
+
+//GoSpider to visit them and crawl them for all links
+chaos -d paypal.com -bbq -filter-wildcard -http-url | xargs -I@ -P5 sh -c 'gospider -a -s "@" -d 3'
+
+ cat probe | xargs -I@ -P20 sh -c 'gospider -a -s "@" -d 2' | grep -Eo '(http|https)://[^/"].*.js+' | sed "s#] - #\n#g"  | anew | grep "line.me" | tee -a spider
+
+jasles scan -50 -s ~/../jasles-signature/{cve,...} -U host -L 50 -v -G --html jaeles-report
+
+nuclei -l host -t ~/../nuclei-template/{cve,...} -o result.txt -pBar
+
+amass intel -org line  -max-dns-queries 2500 | awk -F, '{print $1}' ORS=',' | sed 's/,$//' | xargs -P3 -I@ -d ',' amass intel -asn @ -max-dns-queries 2500
+
+cat target.txt | waybackurls | gf xss 
+
+echo "http://bugcrowd.com" | subfinder -silent | hakrawler -plain -usewayback -scope yolo | sed $'s/[:./?=:]/\\\n/g' | anew
+
+dirs -u http://loadturn002.example.com -e * -w ~/mylist/ -t 100 -x 403,404,301
+
+echo ".com/abc.php?cid=23&nid=333" | nuclei -t ~/auto_recon/sqli2.yaml
+
+> ffuf -w SecLists/Usernames/xato-net-10-million-usernames.txt -u "https://domain.tld/rest/api/latest/groupuserpicker?query=FUZZ&maxResults=1" -mr "Showing 1"
+
+cat file.txt | sort -u | rev | cut -d"." -f3- | rev | sed 's/-/\n/g' | sed 's/\./\n/g' | sort -u
+
+python3 dirsearch.py -u http://aa.example.com -e * -w my_wordlist.txt -t 100 -x 403,404,301
+
+curl -s "https://crt.sh/?q=%25.tesla.com&output=json" | jq -r '.[].name_value' | assetfinder -subs-only | sed 's#$#/.git/HEAD#g' | httpx -silent -content-length -status-code 301,302 -timeout 3 -retries 0 -ports 80,8080,443 -threads 500 -title | anew
+
+cat ipforhost | sed 's/EOF//g' | awk 'NF' | tee -a ipforhosts
+
+subfinder -d http://tesla.com -silent | httpx -timeout 3 -threads 300 --follow-redirects -silent | xargs -I% -P10 sh -c 'hakrawler -plain -linkfinder -depth 5 -url %' | grep "tesla"
 
 grep -E -o "([0-9]{1,3}[\.]){1,3}([0-9]{1,3})" trails | sort -u 
 
