@@ -3,77 +3,68 @@ call plug#begin("~/.vim/plugged")
 
 " Plugin Section
 Plug 'preservim/nerdtree'
-Plug 'dense-analysis/ale'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
-Plug 'scrooloose/nerdcommenter'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi'
-Plug 'tpope/vim-fugitive'
-Plug 'jiangmiao/auto-pairs'
-Plug 'machakann/vim-sandwich'
-Plug 'airblade/vim-gitgutter'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install()  }  }
+Plug 'Shougo/deoplete.nvim'		"auto complete
 Plug 'junegunn/fzf.vim'
-Plug 'mattn/emmet-vim'
-Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'numirias/semshi'            	"advance highlight color for python
 Plug 'ryanoasis/powerline-extra-symbols'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'jeetsukumaran/vim-pythonsense'
-Plug 'sheerun/vim-polyglot'
-Plug 'ryanoasis/vim-devicons'
+Plug 'sheerun/vim-polyglot'        	"multi pack language
+Plug 'ryanoasis/vim-devicons'     	"dev icon
 Plug 'kaicataldo/material.vim'
-Plug 'psliwka/vim-smoothie'
-Plug 'junegunn/goyo.vim'
-Plug 'mhinz/vim-startify'
-Plug 'airblade/vim-rooter'
-Plug 'kevinhwang91/rnvimr'
+Plug 'psliwka/vim-smoothie'      	"smooth scroll ctr+d ctr+u
+Plug 'junegunn/goyo.vim'        	"editor mode :Goyo
+Plug 'kevinhwang91/rnvimr'     		"ranger mode with small window
 Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'jmcantrell/vim-virtualenv'
-Plug 'PieterjanMontens/vim-pipenv'
+Plug 'rbgrouleff/bclose.vim'       	"dependency of ranger
+Plug 'ap/vim-css-color'
 
 
 call plug#end()
 
+set autoread
 set showcmd
-set autoindent
+"set autoindent
 set lazyredraw
 set t_ut=""
 set ruler
 set number
 set termguicolors
 set relativenumber
-"set cursorline
-set mouse=a
+"set mouse=a
 set title
 set background=dark
 set wildmenu
 set showtabline=2
-"set noshowmode
 set encoding=UTF-8
 set hlsearch
 set hidden
 set cmdheight=2
 set signcolumn=yes
+set smartcase
+set hlsearch
+set cursorline
+set showmatch
+set showmode
+set incsearch
+set modelines=0
+
 
 set pastetoggle=<F2>
 
 
 filetype plugin indent on
 syntax on
-syntax enable
 let g:material_terminal_italics = 1
 let g:material_theme_style = 'ocean'
 colorscheme material
 
 
-"hi Normal guibg=#000000
+hi Normal guibg=NONE ctermbg=NONE
 "hi LineNr ctermbg=16 guibg=#000000
 
 
@@ -169,8 +160,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-map <C-i> :NERDTreeToggle<CR>
-nnoremap <C-o> :Buffers<CR>
+map <F3> :NERDTreeToggle<CR>
+nnoremap <F4> :Buffers<CR>
 
 let g:closetag_filenames = '*.html,*.js,*.jsx'
 
