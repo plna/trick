@@ -256,6 +256,8 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%{%F{blue}%}┌─[%{%f%b%k%}$(build_prompt)
-%{%F{blue}%}└─╼ '
+PROMPT='%{%F{blue}%}%{%f%b%k%}$(build_prompt)
+%{%F{blue}%}❯ '
+RPROMPT='$(git_prompt_info)%F{blue}%}[%F{green}%D{%H:%M}%F{blue}]'
 
+#RPROMPT='$(git_prompt_info)%F{blue}%}[%F{green}%D{%L:%M} %D{%p}%f%F{blue}]'

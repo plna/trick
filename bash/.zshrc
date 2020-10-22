@@ -24,13 +24,13 @@ done
 }
 
 findd(){
-	echo "Finding..."
-	find . -type d -name "$1"
+    echo "Finding..."
+    find . -type d -name "$1"
 }
 
 findf(){
-	echo "Finding..."
-	find . -type f -name "$1"
+    echo "Finding..."
+    find . -type f -name "$1"
 }
 #######################################
 
@@ -152,6 +152,7 @@ alias lct="colorls --sd --tree"
 alias sublist3r="python3 ~/tools/Sublist3r/sublist3r.py"
 alias dirs="~/tools/dirsearch/dirsearch.py"
 alias wcl='wc -l'
+alias rm="trash"
 
 prompt_context(){}
 
@@ -160,10 +161,18 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/home/ubuntu/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/snap/bin
+#export DISPLAY=localhost:0.0
+
+
+#export http_proxy=139.99.102.114:80
+#export https_proxy=139.99.102.114:80
+#export no_proxy=localhost,127.0.0.1
+
 
 autoload -U compaudit && compinit
 
 
+# bindkey
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
