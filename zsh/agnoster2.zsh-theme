@@ -258,6 +258,6 @@ build_prompt() {
 
 PROMPT='%{%F{blue}%}%{%f%b%k%}$(build_prompt)
 %{%F{blue}%}❯ '
-RPROMPT='$(git_prompt_info)%F{blue}%}[%F{green}%D{%H:%M}%F{blue}]'
+RPROMPT='%F{blue}%}[%F{green}%D{%H:%M}%F{blue}]'
 
 #RPROMPT='$(git_prompt_info)%F{blue}%}[%F{green}%D{%L:%M} %D{%p}%f%F{blue}]'
