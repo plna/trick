@@ -7,11 +7,10 @@ Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'Shougo/deoplete.nvim'     "auto complete
+Plug 'Shougo/deoplete.nvim'         "auto complete
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'airblade/vim-rooter'
-Plug 'numirias/semshi'              "advance highlight color for python
 Plug 'ryanoasis/powerline-extra-symbols'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
