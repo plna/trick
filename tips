@@ -1,3 +1,7 @@
+FIX WT CURSOR DISAPEAR
+echo -en "\e[?25h"
+
+
 
 X-Forwarded-Host
 X-Forwarded-Port

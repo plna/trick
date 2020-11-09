@@ -24,6 +24,10 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'        "dependency of ranger
 Plug 'ap/vim-css-color'
 Plug 'luochen1990/rainbow'
+Plug 'jiangmiao/auto-pairs'
+Plug 'preservim/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
+
 
 
 call plug#end()
@@ -33,6 +37,7 @@ filetype plugin indent on
 syntax on
 
 
+set updatetime=100
 set autoread
 set showcmd
 set autoindent
@@ -54,11 +59,12 @@ set cursorline
 set showmatch
 set showmode
 set incsearch
+set ignorecase    "searching is not case sensitive
 filetype plugin indent on
 " show existing tab with 4 spaces width
-set tabstop=2
+set tabstop=4
 " when indenting with '>', use 4 spaces width
-set shiftwidth=2
+set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
@@ -70,6 +76,7 @@ set showtabline=2
 set cmdheight=2
 set modelines=0
 set laststatus=2
+
 
 set pastetoggle=<F2>
 
@@ -83,6 +90,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:rainbow_active = 1
 
 let g:deoplete#enable_at_startup = 1
+let g:fzf_layout = { 'down': '~40%'  }
 
 "shortcuts
 map <F3> :NERDTreeToggle<CR>
@@ -102,15 +110,7 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 
 
-" Enable per-command history.
-" CTRL-N and CTRL-P will be automatically bound to next-history and
-" previous-history instead of down and up. If you don't like the change,
-" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
-let g:fzf_history_dir = '~/.local/share/fzf-history'
-let g:fzf_buffers_jump = 1
 
-let g:fzf_action = {
-  \ 'ctrl-q': 'vsplit' }
 
 "open a NERDTree automatically when vim starts up if no files were specified
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -131,3 +131,30 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
 let g:rainbow_active = 1
+
+" GitGutter
+let g:gitgutter_highlight_lines = 1
+let g:gitgutter_highlight_linenrs = 1
+
+
+" FZF
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_buffers_jump = 1
+
+let g:fzf_action = {
+  \ 'ctrl-q': 'vsplit' }
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+

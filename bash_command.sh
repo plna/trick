@@ -1,4 +1,16 @@
 
+grep -oiahE "https?://[^\"\\'> ]+\.js"
+
+grep -Eo "(http|https)://[a-zA-Z0-9./~?=_-]*.js"
+
+
+curl -s https://certspotter.com/api/v0/certs\?domain\=$1 | jq '.[].dns_names[]' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u | grep $1
+
+curl -s "https://crt.sh/?q=%.$1&output=json"  | jq -r '.[].name_value' | sed 's/\*\.//g' | grep $1 | sort -u
+
+for ipa in 98.13{6..9}.{0..255}.{0..255}; do
+wget -t 1 -T 5 http://${ipa}/phpinfo.php; done&
+
 waybackurls http://bounty.com | grep '=' | qsreplace "kingofbounty{{9*9}}"  | httpx -match-regex 'kingofbounty81' -threads 300 -http-proxy http://127.0.0.1:8080/
 curl https://host.io/api/full/{ domain.com }?token=50cd58723e4a97
 
@@ -41,7 +53,7 @@ findomain -t http://testphp.vulnweb.com -q | httpx -silent | anew | waybackurls 
 //GoSpider to visit them and crawl them for all links
 chaos -d paypal.com -bbq -filter-wildcard -http-url | xargs -I@ -P5 sh -c 'gospider -a -s "@" -d 3'
 
- cat probe | xargs -I@ -P20 sh -c 'gospider -a -s "@" -d 2' | grep -Eo '(http|https)://[^/"].*.js+' | sed "s#] - #\n#g"  | anew | grep "line.me" | tee -a spider
+cat probe | xargs -I@ -P20 sh -c 'gospider -a -s "@" -d 2' | grep -Eo '(http|https)://[^/"].*.js+' | sed "s#] - #\n#g"  | anew | grep "line.me" | tee -a spider
 
 jaeles scan -c 50 -s ~/../jaeles-signature/{cve,...} -U host -L 50 -v -G --html jaeles-report
 

