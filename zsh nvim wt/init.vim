@@ -37,6 +37,7 @@ filetype plugin indent on
 syntax on
 
 
+set clipboard=unnamedplus
 set updatetime=100
 set autoread
 set showcmd
@@ -77,14 +78,12 @@ set cmdheight=2
 set modelines=0
 set laststatus=2
 
-
 set pastetoggle=<F2>
 
 hi Normal guibg=NONE ctermbg=NONE
 
 "Config Section
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 
 
 let g:rainbow_active = 1
@@ -109,8 +108,7 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 
-
-
+au VimLeave * set guicursor=a:ver1-blinkon1
 
 "open a NERDTree automatically when vim starts up if no files were specified
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -157,4 +155,11 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
-
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif

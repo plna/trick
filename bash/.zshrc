@@ -1,36 +1,18 @@
 ###################################
 
-certprobe(){
-    curl -s https://crt.sh/\?q=\%.$1\&output\=json  | jq -r '.[].name_value' | sed 's/\*\.//g' | grep $1 | sort -u | httprobe #| tee -a ./all.txt
-}
-
-certspotter(){
-    curl -s https://certspotter.com/api/v0/certs\?domain\=$1 | jq '.[].dns_names[]' | sed 's/\"//g' | sed 's/\*\.//g' | sort -u | grep $1
-} #h/t Michiel Prins
-
-
 crtsh(){
-    curl -s https://crt.sh/\?q=\%.$1\&output\=json  | jq -r '.[].name_value' | sed 's/\*\.//g' | grep $1 | sort -u
+    curl -s "https://crt.sh/?q=%.$1&output=json"  | jq -r '.[].name_value' | sed 's/\*\.//g' | grep $1 | sort -u
 }
 
-response(){
-echo "Gathering Response"       
-        for x in $(cat alive)
-do
-        NAME=$(echo $x | awk -F/ '{print $3}')
-        curl -X GET -H "X-Forwarded-For: evil.com" $x -I > "headers/$NAME" 
-        curl -s -X GET -H "X-Forwarded-For: evil.com" -L $x > "responsebody/$NAME"
-done
-}
 
 findd(){
-    echo "Finding..."
-    find . -type d -name "$1"
+	echo "Finding..."
+	find . -type d -name "$1"
 }
 
 findf(){
-    echo "Finding..."
-    find . -type f -name "$1"
+	echo "Finding..."
+	find . -type f -name "$1"
 }
 #######################################
 
@@ -149,10 +131,11 @@ alias expl="explorer.exe ."
 alias lc="colorls -A --gs --sd"
 alias lcl="colorls -Al --sd"
 alias lct="colorls --sd --tree"
-alias sublist3r="python3 ~/tools/Sublist3r/sublist3r.py"
 alias dirs="~/tools/dirsearch/dirsearch.py"
 alias wcl='wc -l'
 alias rm="trash"
+alias arjun="~/tools/Arjun/arjun.py -f ~/tools/Arjun/db/params.txt"
+alias arjunp="~/tools/Arjun/arjun.py"
 
 prompt_context(){}
 
@@ -162,7 +145,8 @@ export PATH=$PATH:/home/ubuntu/go/bin
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/snap/bin
 #export DISPLAY=localhost:0.0
-
+export VISUAL=nvim
+export EDITOR=nvim
 
 #export http_proxy=139.99.102.114:80
 #export https_proxy=139.99.102.114:80

