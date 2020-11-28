@@ -27,6 +27,7 @@ Plug 'luochen1990/rainbow'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
+Plug 'google/vim-searchindex'
 
 
 
@@ -80,7 +81,6 @@ set laststatus=2
 
 set pastetoggle=<F2>
 
-hi Normal guibg=NONE ctermbg=NONE
 
 "Config Section
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -107,6 +107,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
+
+hi Normal guibg=NONE ctermbg=black
 
 au VimLeave * set guicursor=a:ver1-blinkon1
 
@@ -155,11 +157,3 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
-" WSL yank support
-let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
-if executable(s:clip)
-    augroup WSLYank
-        autocmd!
-        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-    augroup END
-endif
