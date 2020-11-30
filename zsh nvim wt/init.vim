@@ -89,11 +89,13 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:rainbow_active = 1
 
 let g:deoplete#enable_at_startup = 1
-let g:fzf_layout = { 'down': '~40%'  }
 
 "shortcuts
 map <F3> :NERDTreeToggle<CR>
 nnoremap <F4> :Buffers<CR>
+
+"Change to current file directory
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 "theme
 let g:material_terminal_italics = 1
@@ -108,8 +110,10 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline_powerline_fonts = 1
 
-hi Normal guibg=NONE ctermbg=black
 
+"background 
+hi Normal guibg=NONE ctermbg=black
+"reset cursor blink when quit nvim
 au VimLeave * set guicursor=a:ver1-blinkon1
 
 "open a NERDTree automatically when vim starts up if no files were specified
@@ -130,7 +134,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
-let g:rainbow_active = 1
 
 " GitGutter
 let g:gitgutter_highlight_lines = 1
@@ -143,10 +146,27 @@ let g:gitgutter_highlight_linenrs = 1
 " previous-history instead of down and up. If you don't like the change,
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
-let g:fzf_buffers_jump = 1
 
+" This is the default extra key bindings
 let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
   \ 'ctrl-q': 'vsplit' }
+
+let g:fzf_tags_command = 'ctags -R'
+let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
+let $FZF_DEFAULT_COMMAND="rg --files --hidden"
+
+
+"Get Files
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+
+" Get text in files with Rg
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
 
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
@@ -156,4 +176,6 @@ function! RipgrepFzf(query, fullscreen)
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+
 
