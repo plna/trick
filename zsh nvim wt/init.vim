@@ -28,7 +28,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 Plug 'airblade/vim-gitgutter'
 Plug 'google/vim-searchindex'
-
+Plug 'preservim/tagbar'
+Plug 'ap/vim-buftabline'
 
 
 call plug#end()
@@ -37,50 +38,52 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
-
+set autochdir
+set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus
-set updatetime=100
 set autoread
 set showcmd
-set autoindent
-set smartindent
 set lazyredraw
 set ruler
 set number
 set termguicolors
 set relativenumber
-"set mouse=a
+" set mouse=a                             " Enable your mouse
 set title
 set background=dark
 set wildmenu
-set hlsearch
-set hidden
+set hidden                              " Required to keep multiple buffers open multiple buffers
 set smartcase
 set hlsearch
-set cursorline
+set cursorline                          " Enable highlighting of the current line
 set showmatch
-set showmode
 set incsearch
-set ignorecase    "searching is not case sensitive
-filetype plugin indent on
-" show existing tab with 4 spaces width
+set ignorecase                          "searching is not case sensitive
 set tabstop=4
-" when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" On pressing tab, insert 4 spaces
-set expandtab
-
+set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
+set expandtab                           " Converts tabs to spaces
+set smartindent                         " Makes indenting smart
+set autoindent                          " Good auto indent
+set fileformat=unix                     " Prevent dos file make grep error
+set encoding=utf-8                      " The encoding displayed
+set pumheight=10                        " Makes popup menu smaller
+set fileencoding=utf-8                  " The encoding written to file
+set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
+set updatetime=300                      " Faster completion
+set showtabline=2                       " Always show tabs
+set cmdheight=2                         " More space for displaying messages
+set laststatus=2                        " Always display the status line
+set noshowmode                         " We don't need to see things like -- INSERT -- anymore
 set t_ut=""
-set signcolumn=yes
-set encoding=UTF-8
 
-set showtabline=2
-set cmdheight=2
-set modelines=0
-set laststatus=2
-
+"shortcuts
+map <F3> :NERDTreeToggle<CR>
+nnoremap <F4> :Buffers<CR>
+nmap <F8> :TagbarToggle<CR>
 set pastetoggle=<F2>
-
+"Change to current file directory
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 "Config Section
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -90,12 +93,6 @@ let g:rainbow_active = 1
 
 let g:deoplete#enable_at_startup = 1
 
-"shortcuts
-map <F3> :NERDTreeToggle<CR>
-nnoremap <F4> :Buffers<CR>
-
-"Change to current file directory
-nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 "theme
 let g:material_terminal_italics = 1
@@ -157,7 +154,6 @@ let g:fzf_tags_command = 'ctags -R'
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden"
 
-
 "Get Files
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
@@ -176,6 +172,4 @@ function! RipgrepFzf(query, fullscreen)
   call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
 endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
-
-
 
