@@ -136,6 +136,7 @@ alias wcl='wc -l'
 alias rm="trash"
 alias arjun="~/tools/Arjun/arjun.py -f ~/tools/Arjun/db/params.txt"
 alias arjunp="~/tools/Arjun/arjun.py"
+alias simpled="ruby ~/scripts/simple_diff.rb"
 
 prompt_context(){}
 
