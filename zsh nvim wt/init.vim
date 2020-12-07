@@ -18,7 +18,6 @@ Plug 'sheerun/vim-polyglot'             "multi pack language
 Plug 'kaicataldo/material.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'psliwka/vim-smoothie'             "smooth scroll ctr+d ctr+u
-Plug 'junegunn/goyo.vim'                "editor mode :Goyo
 Plug 'kevinhwang91/rnvimr'              "ranger mode with small window
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'            "dependency of ranger
@@ -30,10 +29,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'google/vim-searchindex'
 Plug 'preservim/tagbar'
 Plug 'ryanoasis/vim-devicons'           "dev icon
+Plug 'neomake/neomake'
 
 
 call plug#end()
-
 
 filetype plugin indent on
 syntax on
@@ -92,6 +91,7 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:rainbow_active = 1
 let g:deoplete#enable_at_startup = 1
 
+call neomake#configure#automake('w')
 
 "theme
 " let g:material_terminal_italics = 1
@@ -106,8 +106,7 @@ let g:airline_theme='simple'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'jsformatter'
-
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 
 let g:NERDTreeDirArrowExpandable = ''
@@ -118,20 +117,6 @@ let g:gitgutter_highlight_lines = 1
 let g:gitgutter_highlight_linenrs = 1
 
 
-" paste without explicitly turning paste mode on/off
-let &t_SI .= "\<Esc>[?2004h"
-let &t_EI .= "\<Esc>[?2004l"
-
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
-
-function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
-  set paste
-  return ""
-endfunction
-
-"reset cursor blink when quit nvim
-au VimLeave * set guicursor=a:ver1-blinkon1
 
 "open a NERDTree automatically when vim starts up if no files were specified
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -186,8 +171,8 @@ endfunction
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 
-
-
 " Fix nerdtree have bracket when use with rainbow
 let g:rainbow_conf = {'separately': {'nerdtree': 0,}}
 
+"reset cursor blink when quit nvim
+au VimLeave * set guicursor=a:ver1-blinkon1
