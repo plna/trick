@@ -2,6 +2,7 @@ https://cards-frame.twitter.com/i/cards/tfw/v1/uc/1348268347021008896#
 
 https://my.tomorrowland.com/activate?code=528517&email=asd%40tomorrowland.com
 
+https://www.datastax.com/ reflect xss on respone <img class="img-fluid" src="... {XSS}"
 
 http://jumbo.zomato.com.s3.amazonaws.com
 <?xml version="1.0" encoding="UTF-8"?>

