@@ -93,15 +93,12 @@ let g:rainbow_active = 1
 let g:deoplete#enable_at_startup = 1
 
 
-let g:indentLine_enabled = 1
+let g:indentLine_enabled = 0
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
-"theme
-" let g:material_terminal_italics = 1
-" let g:material_theme_style = 'ocean'
 colorscheme onedark
-let g:onedark_terminal_italics = 1
 au ColorScheme * hi Normal guibg=None
+highlight Comment cterm=italic gui=italic
 
 "background 
 hi Normal guibg=NONE ctermbg=black
