@@ -1,6 +1,14 @@
 
 
 
+for i in {1..9}; echo $i
+for i in {1..9..2}; do echo $i; done
+
+amass enum -passive -norecursive -noalts -df domains.txt -o subdomains.txt
+
+cut -d: -f2
+
+ffuf -w common.txt:FUZZ -w ~/bb/target/httpx.txt:URL -u URLFUZZ -mc 200 -of csv -o ffuf-result.txt
 
 cat sub.txt | sed 's#$#/.git/HEAD#g' | httpx -silent -content-length -status-code 301,302 -timeout 3 -retries 0 -ports 80,8080,443 -threads 500 -title | anew
 
