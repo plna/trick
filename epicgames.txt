@@ -1,0 +1,2 @@
+https://www.epicgames.com/id/api/csrf
+https://www.epicgames.com/account/v2/refresh-csrf

