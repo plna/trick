@@ -1,5 +1,8 @@
 1. Don't install Kali on Store
 2. import 
       wsl --import kali-linux C:\Users\phanl\AppData\Local\Packages\KaliLinux\ F:\BackupWSL\Kali-WSL1-3.tar
-3. wsl -d kali-linux
-4. wsl -d <DistroName> -u <UserName>
+(wsl -d kali-linux)
+(wsl -d <DistroName> -u <UserName>)
+
+3. default directory in WSL
+\\wsl.localhost\kali-linux\home\kali
