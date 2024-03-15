@@ -1,8 +1,7 @@
-
-# Shows navigable menu of all options when hitting Tab
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 
-Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineKeyHandler -Key "Alt+f" -Function ForwardWord
 Set-PSReadLineKeyHandler -Key "Ctrl+f" -Function AcceptSuggestion
